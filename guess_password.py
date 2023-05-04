@@ -1,6 +1,6 @@
 import random
 import datetime
-geneSet="abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ!@#$%^&*(),.-_=+1234567890"
+geneSet="abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ!@#$%^&*(),.-_=+1234567890 "
 password = "Hello World!"
 
 def generar_padre(longitud):
@@ -10,6 +10,9 @@ def generar_padre(longitud):
     genes.extend(random.sample(geneSet, tamanhoMuestral))
   return''.join(genes)
 
+def obtener_fitness(guess):
+  return sum(1 for expected, actual in zip(password, guess) if expected==actual)
+  
 def mutar(padre):
   indice=random.randrange(0,len(padre))
   genes_Ninho=list(padre)
@@ -19,18 +22,18 @@ def mutar(padre):
 
 def mostrar(conjetura):
   diferencia=(datetime.datetime.now()-horaInicio).total_seconds()
-  aptitud=obtener_aptitud(conjetura)
+  aptitud=obtener_fitness(conjetura)
   print("{}\t{}\t{}".format(conjetura,aptitud,diferencia))
   
 random.seed()
 horaInicio=datetime.datetime.now()
 mejorPadre=generar_padre(len(password))
-mejorAptitud=obtener_aptitud(mejorPadre)
+mejorAptitud=obtener_fitness(mejorPadre)
 mostrar(mejorPadre)
 
 while True:
   ninho=mutar(mejorPadre)
-  ninhoAptitud=obtener_aptitud(ninho)
+  ninhoAptitud=obtener_fitness(ninho)
   if mejorAptitud>=ninhoAptitud:
     continue
   mostrar(ninho)
