@@ -1,7 +1,6 @@
 # Algoritmos de búsqueda
 
 <img src="https://img.shields.io/badge/language-python-orange.svg" style="zoom:100%;" /> <img src="https://img.shields.io/badge/counts-149-brightgreen.svg" style="zoom:100%;" />
-<img src="https://visitor-badge.laobi.icu/badge?page_id=zonghui0228.rosalind-solutions" alt="visitor badge"/>
 
 **Búsqueda lineal (Linear Search)**: Compara cada elemento de manera secuencial con el valor buscado. Es simple pero puede ser ineficiente para grandes conjuntos de datos no ordenados.
 
