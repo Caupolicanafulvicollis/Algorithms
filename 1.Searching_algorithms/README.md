@@ -3,6 +3,7 @@
 <img src="https://img.shields.io/badge/language-python-orange.svg" style="zoom:100%;" />
 
 * **Búsqueda lineal (Linear Search)**:
+
 Compara cada elemento de manera secuencial con el valor buscado. Es simple pero puede ser ineficiente para grandes conjuntos de datos no ordenados.
 [[code](https://github.com/gnvidal/Algorithms/blob/a12091ec9b6003532a7cbdf95a22125019b69a96/1.Searching_algorithms/1.Linear_search.py)]
 
