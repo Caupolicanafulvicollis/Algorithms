@@ -9,7 +9,7 @@ Compara cada elemento de manera secuencial con el valor buscado. Es simple pero 
 
 * ### **Búsqueda binaria (Binary Search)**
 Solo aplicable a conjuntos de datos ordenados. Divide el conjunto a la mitad en cada iteración, eliminando la mitad de los elementos en cada paso. Es más eficiente que la búsqueda lineal.
-[[code](https://github.com/gnvidal/Algorithms/blob/a12091ec9b6003532a7cbdf95a22125019b69a96/1.Searching_algorithms/1.Linear_search.py)]
+[[code](https://github.com/gnvidal/Algorithms/blob/76d921a4c6f78b6c2e39ba693631a83a44820bfc/1.Searching_algorithms/2.Searching_binary.py)]
 
 
 **Búsqueda por interpolación (Interpolation Search)**: Similar a la búsqueda binaria, pero utiliza una estimación interpolada para determinar la ubicación probable del elemento buscado. Es más rápida que la búsqueda binaria para conjuntos de datos uniformemente distribuidos.
