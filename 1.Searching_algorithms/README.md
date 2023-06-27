@@ -12,9 +12,14 @@ Solo aplicable a conjuntos de datos ordenados. Divide el conjunto a la mitad en 
 [[code](https://github.com/gnvidal/Algorithms/blob/76d921a4c6f78b6c2e39ba693631a83a44820bfc/1.Searching_algorithms/2.Searching_binary.py)]
 
 
-**Búsqueda por interpolación (Interpolation Search)**: Similar a la búsqueda binaria, pero utiliza una estimación interpolada para determinar la ubicación probable del elemento buscado. Es más rápida que la búsqueda binaria para conjuntos de datos uniformemente distribuidos.
+* ### **Búsqueda por interpolación (Interpolation Search)**
 
-**Búsqueda de salto (Jump Search)**: Funciona saltando hacia adelante en bloques fijos en lugar de comparar cada elemento. Requiere que los datos estén ordenados y es más eficiente que la búsqueda lineal.
+Similar a la búsqueda binaria, pero utiliza una estimación interpolada para determinar la ubicación probable del elemento buscado. Es más rápida que la búsqueda binaria para conjuntos de datos uniformemente distribuidos.
+[[code](https://github.com/gnvidal/Algorithms/blob/76d921a4c6f78b6c2e39ba693631a83a44820bfc/1.Searching_algorithms/2.Searching_binary.py)]
+
+* ### **Búsqueda de salto (Jump Search)**
+
+Funciona saltando hacia adelante en bloques fijos en lugar de comparar cada elemento. Requiere que los datos estén ordenados y es más eficiente que la búsqueda lineal.
 
 **Búsqueda exponencial (Exponential Search)**: Comienza con un rango pequeño y lo expande exponencialmente hasta encontrar un rango que contenga el elemento buscado. Luego, realiza una búsqueda binaria en ese rango. Es eficiente para conjuntos de datos ordenados y no ordenados.
 
