@@ -4,11 +4,11 @@ def binary_search(lista,elemento):
     pos=-1 # Inicializo respuesta, el valor no fue encontrado
     while izq <= der:
         #valor punto medio del segmento
-        medio=(izq+der)//2
+        medio=izq+(der-izq)//2
         print(f"DEBUG: 'izq:'{izq}' | 'der:'{der}' | 'medio:'{medio}")
         #si el medio es igual al valor buscado, lo devuleve
         if lista[medio]==elemento:
-            pos=medio
+            return medio
         #si el valor del punto medio es mayor que 'elemento', sigue buscando
         #en el segmento de la izquierda: [izq, medio-1], descartando la derecha
         elif lista[medio]>elemento:
@@ -27,3 +27,4 @@ if __name__ == '__main__':
         resultado=binary_search(lista,elemento)
         print(f"Resultado: {resultado}")
         lista=input('Dame una lista ordenada ([[]] para terminar): ')
+        
