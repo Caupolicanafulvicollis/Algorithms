@@ -1,1 +1,1 @@
-# Explicación del lograitmo de búsqueda
+# Explicación del logaritmo de búsqueda
