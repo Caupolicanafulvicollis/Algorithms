@@ -2,10 +2,9 @@ def binary_search(lista,elemento):
     izq=0
     der=len(lista)-1
     pasos=0
-    # Inicializo respuesta, el valor no fue encontrado
     while izq <= der:
         pasos+=1
-        medio=(izq+der)//2
+        medio=(der+izq)//2
         print(f"DEBUG: 'izq:'{izq}' | 'der:'{der}' | 'medio:'{medio}")
         #si el medio es igual al valor buscado, lo devuleve
         if lista[medio]==elemento:
@@ -26,5 +25,4 @@ def binary_search(lista,elemento):
 if __name__ == '__main__':
     lista=[1,3,5,7,9,11,13,15,17,19,21,23]
     elemento=19
-    posicion=binary_search(lista,elemento)
-    print(posicion)
+    binary_search(lista,elemento)
