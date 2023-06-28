@@ -24,7 +24,7 @@ def binary_search(lista,elemento):
     return False
 
 if __name__ == '__main__':
-    lista=[1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21,23]
+    lista=[1,3,5,7,9,11,13,15,17,19,21,23]
     elemento=19
     posicion=binary_search(lista,elemento)
     print(posicion)
