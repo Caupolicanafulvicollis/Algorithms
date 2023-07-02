@@ -4,4 +4,4 @@ El archivo se encuentra en esta misma carpeta [[code](https://github.com/gnvidal
 
 ### La explicacion del algortimo
 
-<img src="https://github.com/gnvidal/Algorithms/blob/5eb4a992e8464f511a4f0649793283557698aa32/1.Searching_algorithms/2.Binary_search/Binario.jpg" alt=" "/>
+<img src="https://github.com/gnvidal/Algorithms/blob/526f7de1b355ed00fc6dbdd7f0e275f0ea364de3/1.Searching_algorithms/1.Search_linear/Search_linear.py" alt=" "/>
