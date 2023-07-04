@@ -1,7 +1,7 @@
 # Programación recursiva
 
 ## INDICE
-
+[Leyes de la programación recursiva](#1.Leyes-de-la-programación-recursiva)
 
 ## 1.Leyes de la programación recursiva
 
