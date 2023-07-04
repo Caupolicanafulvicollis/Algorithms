@@ -1,6 +1,6 @@
 # Programación recursiva
 
-##INDICE
+## INDICE
 
 
 ## 1.Leyes de la programación recursiva
