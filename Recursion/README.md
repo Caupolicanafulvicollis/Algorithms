@@ -2,7 +2,7 @@
 
 ## INDICE
 * [Leyes de la programación recursiva](#1.Leyes-de-la-programación-recursiva)
-    - [Cálculo de la suma de una lista de números](https://github.com/gnvidal/Algorithms/blob/e19cce11517559e21fa8a74f094937aa1faf8abd/Recursion/1.sum_recursion.py)
+    - Código de ejemplo: [Cálculo de la suma de una lista de números](https://github.com/gnvidal/Algorithms/blob/e19cce11517559e21fa8a74f094937aa1faf8abd/Recursion/1.sum_recursion.py)
 * [Conversión de un entero a una cadena en cualquier base](#2.Conversión-de-un-entero-a-una-cadena-en-cualquier-base)
 
 ## 1.Leyes de la programación recursiva
