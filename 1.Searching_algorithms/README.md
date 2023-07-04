@@ -1,5 +1,4 @@
 # Algoritmos de búsqueda
-
 <img src="https://img.shields.io/badge/language-python-orange.svg" style="zoom:100%;" />
 
 * ### **Búsqueda lineal (Linear Search)**
