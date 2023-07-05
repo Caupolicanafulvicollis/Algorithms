@@ -97,18 +97,24 @@ Los siguientes algoritmos están ordenados por su grado de dificultad
 * ### **Búsqueda lineal (Linear Search)**
 
 Compara cada elemento de manera secuencial con el valor buscado. Es simple pero puede ser ineficiente para grandes conjuntos de datos no ordenados.
+
 [[Ejemplo de código](https://github.com/gnvidal/Algorithms/blob/93dc6e423633a95cc60a16a0b3e6801b8ca24c3b/1.Searching_algorithms/1.Search_linear/Search_linear.py)]
+
 [[Explicación del código](https://github.com/gnvidal/Algorithms/blob/93dc6e423633a95cc60a16a0b3e6801b8ca24c3b/1.Searching_algorithms/1.Search_linear/Linear_search.jpg)]
 
 * ### **Búsqueda binaria (Binary Search)**
 Solo aplicable a conjuntos de datos ordenados. Divide el conjunto a la mitad en cada iteración, eliminando la mitad de los elementos en cada paso. Es más eficiente que la búsqueda lineal.
+
 [[Ejemplo de código](https://github.com/gnvidal/Algorithms/blob/76d921a4c6f78b6c2e39ba693631a83a44820bfc/1.Searching_algorithms/2.Searching_binary.py)]
+
 [[Explicación del código](https://github.com/gnvidal/Algorithms/blob/93dc6e423633a95cc60a16a0b3e6801b8ca24c3b/1.Searching_algorithms/2.Binary_search/Search_binary.jpg)]
 
 * ### **Búsqueda por interpolación (Interpolation Search)**
 
 Similar a la búsqueda binaria, pero utiliza una estimación interpolada para determinar la ubicación probable del elemento buscado. Es más rápida que la búsqueda binaria para conjuntos de datos uniformemente distribuidos.
+
 [[Ejemplo del código](https://github.com/gnvidal/Algorithms/blob/76d921a4c6f78b6c2e39ba693631a83a44820bfc/1.Searching_algorithms/2.Searching_binary.py)]
+
 [[]()]
 
 * ### **Búsqueda de salto (Jump Search)**
