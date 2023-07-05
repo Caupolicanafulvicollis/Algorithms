@@ -3,15 +3,15 @@
 
 >Los algoritmos de búsqueda son algortimos que nos permite encontrar un valor dentro de un conjunto de datos.
 >Para que un algoritmo de búsqueda pueda operar sobre una lista de manera efectiva, existen ciertas condiciones que deben cumplirse:
-
+>
 >Ordenación de la lista: En muchos algoritmos de búsqueda eficientes, se asume que la lista está ordenada de alguna manera. Esto permite utilizar técnicas de búsqueda más rápidas, como la búsqueda binaria, en lugar de una búsqueda lineal. Si la lista no está ordenada, es posible que sea necesario realizar una etapa de ordenamiento previa para optimizar el proceso de búsqueda.
-
+>
 >Acceso aleatorio: Los algoritmos de búsqueda eficientes suelen requerir acceso aleatorio a los elementos de la lista. Esto significa que se puede acceder directamente a cualquier elemento de la lista utilizando su posición o índice. Si la lista no permite acceso aleatorio, como ocurre en las listas enlazadas, algunos algoritmos de búsqueda pueden no ser aplicables y sería necesario adaptar el enfoque de búsqueda.
-
+>
 >Elementos comparables: En la mayoría de los algoritmos de búsqueda, se comparan los elementos de la lista para determinar si coinciden con el valor buscado. Por lo tanto, los elementos de la lista deben ser comparables, lo que implica que se pueda definir una relación de orden o igualdad entre ellos. Si los elementos no son comparables, se deben utilizar técnicas de búsqueda alternativas o se debe adaptar el algoritmo para trabajar con el tipo de datos específico.
-
+>
 >Tamaño y complejidad: El tamaño de la lista y la complejidad de los elementos también son factores importantes a tener en cuenta al seleccionar un algoritmo de búsqueda. Algunos algoritmos son más adecuados para listas pequeñas o para búsquedas en tiempo real, mientras que otros son más eficientes en listas grandes o en escenarios con requerimientos de recursos específicos.
-
+>
 >En resumen, las condiciones clave para un algoritmo de búsqueda efectivo en una lista son: ordenación (si es necesario), acceso aleatorio a los elementos, comparabilidad de los elementos y consideración del tamaño y complejidad de la lista. 
 
 * ### **Búsqueda lineal (Linear Search)**
