@@ -2,7 +2,7 @@
 <img src="https://img.shields.io/badge/language-python-orange.svg" style="zoom:100%;" />
 
 ## ÍNDICE
-* [Introducción](#introduccion)
+* [Introducción](#introducción)
 * [Búsqueda Lineal](#búsqueda-lineal-linear-search)
   - [Código de busqueda lineal](https://github.com/gnvidal/Algorithms/blob/93dc6e423633a95cc60a16a0b3e6801b8ca24c3b/1.Searching_algorithms/1.Search_linear/Search_linear.py)
     - [Explicación del código](https://github.com/gnvidal/Algorithms/blob/efdc87170ec781c439ad154daa8cd42e776d1953/1.Searching_algorithms/1.Search_linear/Linear_search.jpg)
