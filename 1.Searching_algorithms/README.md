@@ -1,6 +1,14 @@
 # Algoritmos de búsqueda
 <img src="https://img.shields.io/badge/language-python-orange.svg" style="zoom:100%;" />
 
+##ÍNDICE
+* [Introducción](#introduccion)
+* [Búsqueda Lineal](#busqueda-lineal-(linear-search))
+  - Código: [Código de busqueda lineal] (https://github.com/gnvidal/Algorithms/blob/93dc6e423633a95cc60a16a0b3e6801b8ca24c3b/1.Searching_algorithms/1.Search_linear/Search_linear.py)
+
+
+#Introducción
+
 >Los algoritmos de búsqueda son algortimos que nos permite encontrar un valor dentro de un conjunto de datos.
 >Para que un algoritmo de búsqueda pueda operar sobre una lista de manera efectiva, existen ciertas condiciones que deben cumplirse:
 >
