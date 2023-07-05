@@ -22,6 +22,8 @@
 >
 >En resumen, las condiciones clave para un algoritmo de búsqueda efectivo en una lista son: ordenación (si es necesario), acceso aleatorio a los elementos, comparabilidad de los elementos y consideración del tamaño y complejidad de la lista. 
 
+## Algoritmos de búsqueda para listas de un vector 
+
 * ### **Búsqueda lineal (Linear Search)**
 
 Compara cada elemento de manera secuencial con el valor buscado. Es simple pero puede ser ineficiente para grandes conjuntos de datos no ordenados.
@@ -52,6 +54,8 @@ Una variante de la búsqueda por interpolación que se aplica cuando los datos e
 * ### **Búsqueda de Fibonacci (Fibonacci Search)**
 
 Utiliza la secuencia de Fibonacci para dividir el conjunto de datos en segmentos. Es similar a la búsqueda binaria pero puede tener un mejor rendimiento en ciertos casos.
+
+## Algoritmos de búsqueda para grafos
 
 * ### **Búsqueda de árbol binario (Binary Tree Search)**
 
