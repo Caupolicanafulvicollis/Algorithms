@@ -9,7 +9,7 @@
 
 * [Introducción](#introducción)
 
-Los siguientes algoritmos están ordenados por su grado de dificultad
+Los siguientes algoritmos están ordenados de forma creciente a partir de su grado de dificultad
 
 * [1. Búsqueda lineal (Linear Search)](#búsqueda-lineal-linear-search)
   - [Código de ejemplo](https://github.com/gnvidal/Algorithms/blob/93dc6e423633a95cc60a16a0b3e6801b8ca24c3b/1.Searching_algorithms/1.Search_linear/Search_linear.py)
