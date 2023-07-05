@@ -15,11 +15,11 @@ Los siguientes algoritmos están ordenados de forma creciente a partir de su gra
   - [Código de ejemplo](https://github.com/gnvidal/Algorithms/blob/93dc6e423633a95cc60a16a0b3e6801b8ca24c3b/1.Searching_algorithms/1.Search_linear/Search_linear.py)
     - [Explicación del código](https://github.com/gnvidal/Algorithms/blob/efdc87170ec781c439ad154daa8cd42e776d1953/1.Searching_algorithms/1.Search_linear/Linear_search.jpg)
 * [2. Búsqueda binaria (Binary Search)](#búsqueda-binaria-binary-search)
-  - [Código de ejemplo]()
-      - [Explicación del código]()
+  - [Código de ejemplo](https://github.com/gnvidal/Algorithms/blob/55181a857c1e33bab6501782292f6bffa8ddb260/1.Searching_algorithms/2.Binary_search/Binary_search.py)
+      - [Explicación del código](https://github.com/gnvidal/Algorithms/blob/55181a857c1e33bab6501782292f6bffa8ddb260/1.Searching_algorithms/2.Binary_search/Search_binary.jpg)
 * [3. Búsqueda por interpolación (Interpolation Search)](#búsqueda-por-interpolación-interpolation-search)
-    - [Código de ejemplo]()
-      - [Explicación del código]()
+    - [Código de ejemplo](https://github.com/gnvidal/Algorithms/blob/55181a857c1e33bab6501782292f6bffa8ddb260/1.Searching_algorithms/3.Interpolation_Search/Interpolation_Search.py)
+      - [Explicación del código](https://github.com/gnvidal/Algorithms/blob/55181a857c1e33bab6501782292f6bffa8ddb260/1.Searching_algorithms/3.Interpolation_Search/interpolation_search.jpg)
 * [4. Búsqueda de salto (Jump Search)](#búsqueda-de-salto-jump-search)
   - [Código de ejemplo]()
       - [Explicación del código]()
@@ -120,7 +120,7 @@ Similar a la búsqueda binaria, pero utiliza una estimación interpolada para de
 
 [[Ejemplo del código](https://github.com/gnvidal/Algorithms/blob/36bdd2f9e2c6f88d288c77e5a3589eb54b456aa0/1.Searching_algorithms/3.Interpolation_Search/Interpolation_Search.py)]
 
-[[Explicación del código](https://github.com/gnvidal/Algorithms/blob/eb8c81c115d7923defc86203c4c0412423e54e06/1.Searching_algorithms/3.Interpolation_Search/Interpolation_Search.py)]
+[[Explicación del código](https://github.com/gnvidal/Algorithms/blob/55181a857c1e33bab6501782292f6bffa8ddb260/1.Searching_algorithms/3.Interpolation_Search/interpolation_search.jpg)]
 
 * ### **Búsqueda de salto (Jump Search)**
 
