@@ -120,7 +120,7 @@ Similar a la búsqueda binaria, pero utiliza una estimación interpolada para de
 
 [[Ejemplo del código](https://github.com/gnvidal/Algorithms/blob/76d921a4c6f78b6c2e39ba693631a83a44820bfc/1.Searching_algorithms/2.Searching_binary.py)]
 
-[[]()]
+[[](https://github.com/gnvidal/Algorithms/blob/eb8c81c115d7923defc86203c4c0412423e54e06/1.Searching_algorithms/3.Interpolation_Search/Interpolation_Search.py)]
 
 * ### **Búsqueda de salto (Jump Search)**
 
