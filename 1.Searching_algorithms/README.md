@@ -118,9 +118,9 @@ Solo aplicable a conjuntos de datos ordenados. Divide el conjunto a la mitad en 
 
 Similar a la búsqueda binaria, pero utiliza una estimación interpolada para determinar la ubicación probable del elemento buscado. Es más rápida que la búsqueda binaria para conjuntos de datos uniformemente distribuidos.
 
-[[Ejemplo del código](https://github.com/gnvidal/Algorithms/blob/76d921a4c6f78b6c2e39ba693631a83a44820bfc/1.Searching_algorithms/2.Searching_binary.py)]
+[[Ejemplo del código](https://github.com/gnvidal/Algorithms/blob/36bdd2f9e2c6f88d288c77e5a3589eb54b456aa0/1.Searching_algorithms/3.Interpolation_Search/Interpolation_Search.py)]
 
-[[](https://github.com/gnvidal/Algorithms/blob/eb8c81c115d7923defc86203c4c0412423e54e06/1.Searching_algorithms/3.Interpolation_Search/Interpolation_Search.py)]
+[[Explicación del código](https://github.com/gnvidal/Algorithms/blob/eb8c81c115d7923defc86203c4c0412423e54e06/1.Searching_algorithms/3.Interpolation_Search/Interpolation_Search.py)]
 
 * ### **Búsqueda de salto (Jump Search)**
 
