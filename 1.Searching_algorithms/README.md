@@ -41,12 +41,22 @@ Similar a la búsqueda binaria, pero utiliza una estimación interpolada para de
 
 Funciona saltando hacia adelante en bloques fijos en lugar de comparar cada elemento. Requiere que los datos estén ordenados y es más eficiente que la búsqueda lineal.
 
-**Búsqueda exponencial (Exponential Search)**: Comienza con un rango pequeño y lo expande exponencialmente hasta encontrar un rango que contenga el elemento buscado. Luego, realiza una búsqueda binaria en ese rango. Es eficiente para conjuntos de datos ordenados y no ordenados.
+* ### **Búsqueda exponencial (Exponential Search)**
 
-**Búsqueda de interpolación inversa (Inverse Interpolation Search)**: Una variante de la búsqueda por interpolación que se aplica cuando los datos están distribuidos de manera no uniforme y se conoce la función inversa de distribución.
+Comienza con un rango pequeño y lo expande exponencialmente hasta encontrar un rango que contenga el elemento buscado. Luego, realiza una búsqueda binaria en ese rango. Es eficiente para conjuntos de datos ordenados y no ordenados.
 
-**Búsqueda de Fibonacci (Fibonacci Search)**: Utiliza la secuencia de Fibonacci para dividir el conjunto de datos en segmentos. Es similar a la búsqueda binaria pero puede tener un mejor rendimiento en ciertos casos.
+* ### **Búsqueda de interpolación inversa (Inverse Interpolation Search)** 
 
-**Búsqueda de árbol binario (Binary Tree Search)**: Utiliza un árbol binario de búsqueda para organizar los datos de manera que la búsqueda se realice de manera eficiente en tiempo logarítmico. Requiere la construcción previa del árbol.
+Una variante de la búsqueda por interpolación que se aplica cuando los datos están distribuidos de manera no uniforme y se conoce la función inversa de distribución.
 
-**Búsqueda de tabla hash (Hash Table Search)**: Utiliza una función hash para mapear las claves de búsqueda a posiciones de una tabla. Permite búsquedas rápidas en tiempo constante, pero requiere una buena
+* ### **Búsqueda de Fibonacci (Fibonacci Search)**
+
+Utiliza la secuencia de Fibonacci para dividir el conjunto de datos en segmentos. Es similar a la búsqueda binaria pero puede tener un mejor rendimiento en ciertos casos.
+
+* ### **Búsqueda de árbol binario (Binary Tree Search)**
+
+Utiliza un árbol binario de búsqueda para organizar los datos de manera que la búsqueda se realice de manera eficiente en tiempo logarítmico. Requiere la construcción previa del árbol.
+
+* ### **Búsqueda de tabla hash (Hash Table Search)**
+
+Utiliza una función hash para mapear las claves de búsqueda a posiciones de una tabla. Permite búsquedas rápidas en tiempo constante, pero requiere una buena
