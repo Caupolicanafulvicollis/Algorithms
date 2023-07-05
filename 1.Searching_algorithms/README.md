@@ -27,19 +27,50 @@ Los siguientes algoritmos están ordenados por su grado de dificultad
 * [7. Búsqueda de Fibonacci (Fibonacci Search)](#búsqueda-de-fibonacci-fibonacci-search)
   - [Código de ejemplo]()
       - [Explicación del código]()
-* [8. Búsqueda de árbol binario (Binary Tree Search)](#búsqueda-de-árbol-binario-binary-tree-search)
+      - [Explicación del código]()
+* [Búsqueda por hash (Hash Search)](#búsqueda-por-hash-hash-search)
   - [Código de ejemplo]()
       - [Explicación del código]()
-* [9. Búsqueda de tabla hash (Hash Table Search)](#búsqueda-de-tabla-hash-hash-table-search)
+* [Búsqueda por tabla de dispersión (Hashing with Chaining)](#búsqueda-por-tabla-de-dispersión-hashing-with-chaining)
   - [Código de ejemplo]()
       - [Explicación del código]()
-* [](#búsqueda-de-fibonacci-fibonacci-search)
+* [Búsqueda de árbol binario (Binary Tree Search)](#búsqueda-de-árbol-binario-binary-tree-search)
   - [Código de ejemplo]()
       - [Explicación del código]()
-* [](#búsqueda-de-fibonacci-fibonacci-search)
+* [Búsqueda por árbol de búsqueda binario equilibrado (Balanced Binary Search Tree)](#búsqueda-por-árbol-de-búsqueda-binario-equilibrado-balanced-binary-search-tree)
   - [Código de ejemplo]()
       - [Explicación del código]()
-* [](#búsqueda-de-fibonacci-fibonacci-search)
+* [Búsqueda por árbol B (B-Tree)](#búsqueda-por-árbol-b-b-tree)
+  - [Código de ejemplo]()
+      - [Explicación del código]()
+* [Búsqueda en profundidad (DFS, por sus siglas en inglés)](#búsqueda-en-profundidad-dfs-por-sus-siglas-en-inglés)
+  - [Código de ejemplo]()
+      - [Explicación del código]()
+* [Búsqueda en amplitud (BFS, por sus siglas en inglés)](#búsqueda-en-amplitud-bfs-por-sus-siglas-en-inglés)
+  - [Código de ejemplo]()
+      - [Explicación del código]()
+* [Búsqueda en profundidad limitada (DLS, por sus siglas en inglés)](#búsqueda-en-profundidad-limitada-dls-por-sus-siglas-en-inglés)
+  - [Código de ejemplo]()
+      - [Explicación del código]()
+* [Búsqueda de costo uniforme (UCS, por sus siglas en inglés)](#búsqueda-de-costo-uniforme-ucs-por-sus-siglas-en-inglés)
+  - [Código de ejemplo]()
+      - [Explicación del código]()
+* [Búsqueda A (A-star)](#búsqueda-a-a-star)
+  - [Código de ejemplo]()
+      - [Explicación del código]()
+* [Búsqueda en profundidad iterativa (IDS, por sus siglas en inglés)](#búsqueda-en-profundidad-iterativa-ids-por-sus-siglas-en-inglés)
+  - [Código de ejemplo]()
+      - [Explicación del código]()
+* [Algoritmo de Dijkstra](#algoritmo-de-dijkstra)
+  - [Código de ejemplo]()
+      - [Explicación del código]()
+* [Búsqueda de salto (Jump search)](#búsqueda-de-salto-jump-search-1)
+  - [Código de ejemplo]()
+      - [Explicación del código]()
+* [Algoritmo de Bellman-Ford](#algoritmo-de-bellman-ford)
+  - [Código de ejemplo]()
+      - [Explicación del código]()
+* [Algoritmo de Floyd-Warshall](#algoritmo-de-floyd-warshall)
   - [Código de ejemplo]()
       - [Explicación del código]()
 
@@ -99,7 +130,9 @@ Utiliza una función hash para almacenar los elementos en una estructura de dato
 
 Utiliza una tabla de dispersión (hash table) para almacenar y buscar elementos. Cada elemento se asigna a un "bucket" en la tabla utilizando una función hash, y los elementos con colisiones se almacenan en una lista enlazada.
 
-Búsqueda por tabla hash con direcciones abiertas (Hashing with Open Addressing): Es otra variante de la búsqueda por tabla de dispersión donde las colisiones se resuelven mediante el uso de una secuencia determinada de posiciones alternativas en la tabla.
+* ### **Búsqueda por tabla hash con direcciones abiertas (Hashing with Open Addressing)**
+
+Es otra variante de la búsqueda por tabla de dispersión donde las colisiones se resuelven mediante el uso de una secuencia determinada de posiciones alternativas en la tabla.
 
 ## Algoritmos de búsqueda para grafos
 
