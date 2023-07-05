@@ -4,7 +4,7 @@
 ##ÍNDICE
 * [Introducción](#introduccion)
 * [Búsqueda Lineal](#busqueda-lineal-(linear-search))
-  - Código: [Código de busqueda lineal] (https://github.com/gnvidal/Algorithms/blob/93dc6e423633a95cc60a16a0b3e6801b8ca24c3b/1.Searching_algorithms/1.Search_linear/Search_linear.py)
+  - Código: [Código de busqueda lineal](https://github.com/gnvidal/Algorithms/blob/93dc6e423633a95cc60a16a0b3e6801b8ca24c3b/1.Searching_algorithms/1.Search_linear/Search_linear.py)
 
 
 #Introducción
