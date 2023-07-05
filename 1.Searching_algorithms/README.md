@@ -1,5 +1,6 @@
-<img src="https://github.com/gnvidal/Algorithms/blob/ccc42f5492fa8c0aa1a4d6276cdf2d6364e05882/kimelfe.PNG"  width=200 align="right">
 # Algoritmos de búsqueda
+
+<img src="https://github.com/gnvidal/Algorithms/blob/ccc42f5492fa8c0aa1a4d6276cdf2d6364e05882/kimelfe.PNG"  width=200 align="right">
 
 [![Python](https://img.shields.io/badge/Python-3.10+-yellow?style=for-the-badge&logo=python&logoColor=white&labelColor=101010)](https://python.org)
 [![Instagram](https://img.shields.io/badge/Python-3.10+-yellow?style=for-the-badge&logo=python&logoColor=white&labelColor=101010)](https://www.instagram.com/kimelfe.py/)
