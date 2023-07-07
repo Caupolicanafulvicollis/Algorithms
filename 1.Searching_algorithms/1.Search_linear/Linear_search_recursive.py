@@ -1,11 +1,12 @@
 def linear_search_recursive(lista, indice, elemento):
-  posicion=0
+  indice=0
   encontrado=False
   pasos=0
-  print(f"DEBUG: 'elemento:'{elemento}' | 'indice:'{indice}' | 'paso:'{pasos}")
-  if lista[posicion]==elemento:
-    print(f"El elemento {elemento} se encuentra en la posición {posicion}. Se encontró en {pasos} pasos.")
-    return encontrado=True
+  if indice>=len(lista):
+    return -1
+    print(f"El elemento {elemento} no se encontro en la lista.")
+  if lista[indice]==elemento:
+    print(f"El elemento {elemento} se encuentra en la posición {indice}. Se encontró en {pasos} pasos.")
   else:
     return linear_search_recursive(lista, indice+1, elemento)
   pasos+=1
