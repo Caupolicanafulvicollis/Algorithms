@@ -13,7 +13,7 @@ Los siguientes algoritmos están ordenados de forma creciente a partir de su gra
 * [1. Búsqueda lineal (Linear Search)](#búsqueda-lineal-linear-search)
   - [Código de ejemplo](https://github.com/gnvidal/Algorithms/blob/93dc6e423633a95cc60a16a0b3e6801b8ca24c3b/1.Searching_algorithms/1.Search_linear/Search_linear.py)
     - [Explicación del código](https://github.com/gnvidal/Algorithms/blob/efdc87170ec781c439ad154daa8cd42e776d1953/1.Searching_algorithms/1.Search_linear/Linear_search.jpg)
-    - [[Programación recursiva]Código de ejmplo]()
+    - [[Programación recursiva] Código de ejemplo]()
 * [2. Búsqueda binaria (Binary Search)](#búsqueda-binaria-binary-search)
   - [Código de ejemplo](https://github.com/gnvidal/Algorithms/blob/55181a857c1e33bab6501782292f6bffa8ddb260/1.Searching_algorithms/2.Binary_search/Binary_search.py)
       - [Explicación del código](https://github.com/gnvidal/Algorithms/blob/55181a857c1e33bab6501782292f6bffa8ddb260/1.Searching_algorithms/2.Binary_search/Search_binary.jpg)
