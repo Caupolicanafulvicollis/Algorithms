@@ -8,8 +8,6 @@ def linear_search_recursive(lista, indice, elemento,pasos=0):
     pasos+=1
   elif lista[indice]!=elemento:
     return linear_search_recursive(lista, indice+1, elemento, pasos+1)
-  
-  
 
 if __name__=="__main__":
     lista=[1,3,5,7,9,11,13,15,17,19,21,23]
