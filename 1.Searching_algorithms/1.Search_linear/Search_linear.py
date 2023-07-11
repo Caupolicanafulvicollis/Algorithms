@@ -1,19 +1,19 @@
-def search_linear(lista, elemento):
+def linear_search(lista, elemento):
     posicion = 0
-    encontrado = 0
-    pasos = 0
-    while posicion<len(lista):
+    encontrado = False
+    pasos=0 
+    
+    while posicion < len(lista):
         pasos+=1
         print(f"DEBUG: 'elemento:'{elemento}' | 'posicion:'{posicion}' | 'paso:'{pasos}")
         if lista[posicion] == elemento:
-            encontrado = 1
-            print(f"El elemento {elemento} se encuentra en la posición {posicion}. Se encontró en {pasos} pasos.")
+            print(f"el elemento {elemento} se encuentra en la posicion de {posicion}, se encontro en el paso {pasos}")
+            encontrado==True
             break
         else:
-            print("El elemento no se encontró en la lista.")
-        posicion += 1
+            posicion+=1
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     lista=[1,3,5,7,9,11,13,15,17,19,21,23]
-    elemento=5
-    search_linear(lista, elemento)
+    elemento=22
+    linear_search(lista, elemento)
