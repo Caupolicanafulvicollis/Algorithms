@@ -1,5 +1,6 @@
 def interpolation_search(lista,elemento):
-  (left,right)=(0, len(lista)-1)
+  left=0
+  right=len(lista)-1
   pasos=0
   encontrado=False
   while lista[right]!=lista[left] and lista[left]<=elemento<=lista[right]:
