@@ -9,7 +9,8 @@ def interpolation_search(lista,elemento):
     print(f"DEBUG: 'left:'{left}' | 'right:'{right}' | 'medio:'{mid}")
     if elemento == lista[mid]:
       print(f'Valor encontrado en {pasos} pasos, en la posicion {mid}')
-      return encontrado==True
+      encontrado==True
+      break
     elif elemento<lista[mid]:
       right=mid-1
     else:
