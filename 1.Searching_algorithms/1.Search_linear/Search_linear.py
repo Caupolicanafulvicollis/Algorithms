@@ -13,5 +13,5 @@ def linear_search(lista, elemento):
 
 if __name__ == '__main__':
     lista=[1,3,5,7,9,11,13,15,17,19,21,23]
-    elemento=22
+    elemento=25
     linear_search(lista, elemento)
