@@ -4,4 +4,4 @@ El código de ejemplo se encuentra en esta misma carpeta [[code](https://github.
 
 ### La explicacion del algortimo
 
-<img src="https://github.com/gnvidal/Algorithms/blob/6b6c24a3c9ca3ccf76740646b4a13e1b6935453b/1.Searching_algorithms/1.Search_linear/linear_search.jpg" alt=" "/>
+<img src="" alt=" "/>
