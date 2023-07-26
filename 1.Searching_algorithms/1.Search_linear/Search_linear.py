@@ -8,7 +8,7 @@ def linear_search(lista, elemento):
         if lista[posicion] == elemento:
             print(f"se ha encontrado el {elemento} en la posicion {posicion}, en {pasos} pasos" )
             break
-        elif posicion+1 == len(lista):
+        elif posicion == len(lista):
             print(f"el elemento {elemento} no fue encontrado en la lista")
         posicion+=1
 
