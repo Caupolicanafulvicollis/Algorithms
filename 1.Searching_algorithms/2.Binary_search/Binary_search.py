@@ -14,10 +14,10 @@ def binary_search(lista, elemento):
             break
         elif lista[medio]>elemento:
             der=medio-1
-            print(f"DEBUG: 'derecha: {der}' | 'el valor de la izquierda se cambia a: {izq}' | 'pasos: {pasos}' | 'elemento {elemento}'")
+            print(f"DEBUG: 'izquierda: {izq}' | 'el valor de la derecha se cambia a: {der}' | 'pasos: {pasos}' | 'elemento {elemento}'")
         elif lista[medio]<elemento:
             izq=medio+1
-            print(f"DEBUG: 'el valor de la derecha se cambia a: {der}' | 'izquierda: {izq}' | 'pasos: {pasos}' | 'elemento {elemento}'")
+            print(f"DEBUG: 'el valor de la izquierda se cambia a: {izq}' | 'derecha: {der}' | 'pasos: {pasos}' | 'elemento {elemento}'")
     if not encontrado:
         print(f"el elemento {elemento} no esta en la lista")  
 
