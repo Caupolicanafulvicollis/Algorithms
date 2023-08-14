@@ -9,8 +9,6 @@ def exponential_search(lista, elemento):
     return binary_search(lista, elemento, bound//2, min(bound,len(lista)-1))
 
 def binary_search(lista, elemento, left, right):
-    right=len(lista)-1
-    left=0
     pasos=0
     encontrado=False
     while left<=right:
