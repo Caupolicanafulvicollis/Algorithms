@@ -1,4 +1,4 @@
-  def palindrome(word):
+def palindrome(word):
     word=word.lower()
     word=word.replace(' ','')
     if word==word[::-1]:
