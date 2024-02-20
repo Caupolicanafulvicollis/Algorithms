@@ -1,13 +1,12 @@
-"""Hacer un programa que muestre el siguiente dibujo
-*
-* *
-* * *
+"""Idem anterior con este dibujo
+* * * * *
 * * * *
-* * * * *"""
-
+* * *
+* *
+*"""
 def main(filas):
     
-    for i in range(1,filas+1):
+    for i in range(filas,0,-1):
         for j in range(i):
             print("*", end="")
         print()
