@@ -1,5 +1,9 @@
 def main():
-    
+    for i in range(high):
+        for j in range(width):
+            print("*", end="")
+        print()
+
     
 
 if __name__ == '__main__':
