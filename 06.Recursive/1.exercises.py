@@ -7,5 +7,5 @@ def fibonacciR(num):
     
 
 if __name__ == "__main__":
-    num=int(input("Ingrese un numero: "))
+    num=int(input("Ingrese el numero de la secuencia: "))
     print(fibonacciR(num))
