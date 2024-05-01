@@ -1,0 +1,1 @@
+#Dada una secuencia de caracteres, obtener dicha secuencia invertida.
