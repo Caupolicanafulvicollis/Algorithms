@@ -7,6 +7,9 @@ def powers(a,b):
         return 0
     elif b==0:
         return 1
+    elif :
+    
+
     else:
         return a*powers(a,b-1)
 
