@@ -32,5 +32,6 @@ def roman_to_decimal(roman_number):
                 continue
 
 if __name__ == '__main__':
-    roman_number = input('Ingrese un número romano: ')
-    print(roman_to_decimal(roman_number))
+    #roman_number = input('Ingrese un número romano: ')
+    #print(roman_to_decimal(roman_number))
+    assert roman_to_decimal("XV")==15
