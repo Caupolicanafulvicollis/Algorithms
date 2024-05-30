@@ -1,7 +1,7 @@
 import random
 import datetime
 geneSet="abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ!@#$%^&*(),.-_=+1234567890 "
-password = "Hello World!"
+password = "#cALNs!&6Kw%nd9"
 
 def generar_padre(longitud):
   genes=[]
