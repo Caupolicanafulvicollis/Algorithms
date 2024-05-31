@@ -76,5 +76,3 @@ if __name__ == "__main__":
     assert logic_xnor(1,1)==1
 
     print("Test para logic: todos los gates han sido existosos")
-
-
