@@ -6,6 +6,7 @@ def binary_search(lista, elemento):
     while izq<=der:
         pasos+=1
         medio=(der+izq)//2
+        encontrado=True
         print(f"DEBUG1: 'derecha: {der}' | 'izquierda: {izq}' | pasos: {pasos}' | 'medio: {medio}' | 'elemento: {elemento}'")
         if lista[medio]==elemento:
             print(f"elemento {elemento} se encuentra en la posicion {medio}, el algoritmo lo ubico en {pasos} pasos")
