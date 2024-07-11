@@ -16,3 +16,8 @@ else:
         print("Su promedio es:", average_grade, ". Calificacion: Aprobado.")
     else:
         print("Su promedio es:", average_grade, ". Debe rendir examen para aprobar.")
+        exam=float(input("Igrese la nota de su examen: "))
+        if exam>=4.0:
+            print("Calificacion: Aprobado.")
+        else:
+            print("Calificacion: Reprobado.")
