@@ -224,12 +224,12 @@ instructions= f"""
 Instrucciones del juego:
 
 1. Ingrese la cantidad de preguntas que desean responder por jugador. El máximo es de 20 preguntas por jugador.
-2. El juego se desarrolla por turnos. La primera pregunta la responde {player[0]}, quien podrá observar las alternativas.
-3. {player[0]}, seleccione la letra de su alternativa correcta.
-4. Una vez ingresada la alternativa correcta de {player[0]}, si la respuesta es correcta, aparecerá un mensaje que dirá "Su respuesta es correcta" y sumará un punto.
-5. Si la respuesta de {player[0]} es incorrecta, no sumará puntos y recibirá una retroalimentación de la pregunta. Después de la retroalimentación, es el turno de {player[1]}.
-6. Ahora es el turno de {player[1]}, quien debe leer la pregunta y seleccionar su alternativa correcta.
-7. {player[1]}, seleccione la letra de su alternativa correcta. Si la respuesta es correcta, sumará un punto. Si es incorrecta, recibirá una retroalimentación de la pregunta.
+2. El juego se desarrolla por turnos. La primera pregunta la responde {players[0]}, quien podrá observar las alternativas.
+3. {players[0]}, seleccione la letra de su alternativa correcta.
+4. Una vez ingresada la alternativa correcta de {players[0]}, si la respuesta es correcta, aparecerá un mensaje que dirá "Su respuesta es correcta" y sumará un punto.
+5. Si la respuesta de {players[0]} es incorrecta, no sumará puntos y recibirá una retroalimentación de la pregunta. Después de la retroalimentación, es el turno de {player[1]}.
+6. Ahora es el turno de {players[1]}, quien debe leer la pregunta y seleccionar su alternativa correcta.
+7. {players[1]}, seleccione la letra de su alternativa correcta. Si la respuesta es correcta, sumará un punto. Si es incorrecta, recibirá una retroalimentación de la pregunta.
 8. El juego continuará por turnos hasta completar la cantidad de preguntas seleccionadas por jugador.
 9. Ganará el jugador que tenga mayor puntaje.
 \n
@@ -281,17 +281,17 @@ for i in range(number_of_questions):
         print(f"\t {activity_question}")
         print(f"\t {activity_alternative}")
         #Obtener respuesta del jugador
-        option=str(input("Ingrese su opcion, tenga cuidado porque si no se escribe una letra perdera su puntaje del turno. Escriba A, B o C: ")).upper()
+        option=str(input("Ingrese su respuesta, tenga cuidado porque si no se escribe una letra perdera su puntaje del turno. Escriba A, B o C: ")).upper()
         #Verificar respuesta del jugador
         if option==activity['correct']:
-            print("\nSu opcion es correcta. Ha sumado un punto.")
+            print("\nSu respuesta es correcta. Ha sumado un punto.")
             if players[j]==players[0]:
                 score_player1=score_player1+1
             elif players[j]==players[1]:
                 score_player2=score_player2+1     
         elif option!=activity['correct']:
-            print ("\nSu opcion es incorrecta. No ha sumado puntaje")
-            print (f"La opcion correcta es {activity['correct']} porque {activity['feedback']}")
+            print ("\nSu respuesta es incorrecta. No ha sumado puntaje")
+            print (f"La respuesta correcta es {activity['correct']} porque {activity['feedback']}")
         # Mostrar puntajes actuales
         print(f"Puntaje actual de {players[0]}: {score_player1}")
         print(f"Puntaje actual de {players[1]}: {score_player2}")
