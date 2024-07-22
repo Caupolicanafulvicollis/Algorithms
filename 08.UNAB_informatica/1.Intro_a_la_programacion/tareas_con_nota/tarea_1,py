@@ -214,22 +214,9 @@ print(welcome)
 
 players=[]
 for i in range(2):
-    try:
-        player=str.title(input(f"\nIngrese el nombre del jugador numero {i+1}: "))
-        players.append(player)
-        print(f"Hola {player}, tu eres el jugador numero {i+1}")
-    except ValueError:
-        if isinstance(player, str):
-            player=str(player)
-            print(f"El nombre del jugador numero {i+1} queda como {player}.")
-            player.append(players)
-            print(f"Hola {player}, tu eres el jugador numero {i+1}")
-        else: 
-            print("Debe ingresar un nombre valido")
-            players=str(player)
-            print(f"Se escogera como {player} el jugador numero {i+1}")
-            players.append(player)
-            print(f"Hola {player}, tu eres el jugador numero {i+1}")
+    player = input(f"\nIngrese el nombre del jugador número {i + 1}: ").strip().title()
+    players.append(player)
+    print(f"Hola {player}, tú eres el jugador número {i + 1}")
 
 instructions= f"""
 =================================================================
@@ -251,11 +238,11 @@ print(instructions)
 
 number_of_questions=input("""\nIngrese la cantidad de preguntas por persona que quieren responder. Debe ingresar un numero entre 1 y 20: """)
 try:
-    try_number=int(number_of_questions)
-    if try_number>20:
+    number_of_questions=int(number_of_questions)
+    if number_of_questions>20:
         number_of_questions = 20
         print(f"Cada jugador respondera {number_of_questions} preguntas.\n")
-    elif try_number<1:
+    elif number_of_questions<1:
         print("El número minimo de preguntas es 1. Se ajustará a 1 pregunta por jugador.")
         print("El número máximo de preguntas es 20. Se ajustará a 20 preguntas por jugador.")
         number_of_questions = 1
@@ -270,35 +257,57 @@ except ValueError:
         Se le seleccionara la cantidad de preguntas al azar. 
         La cantidad de preguntas que debe responder por jugador es de {number_of_questions} preguntas. \n""")
 
-i=0
 score_player1=0
 score_player2=0
+question_keys=list(questions.keys()) #ingresa en una lista las keys de cada pregunta
+random.shuffle(question_keys) #Barajar las preguntas
+#Asegurarse de tener suficientes pregutnas
+if len(question_keys) < number_of_questions * 2:
+    raise ValueError("No hay suficientes preguntas para el número de turnos.")
 
-while i==number_of_questions:
-    j=0
-    for j in range(len(players)):
-        j=j+1 
-        print(f"Es el turno del jugador {player[i]}")
-        for n,activity in questions.items(): #.items() devuelve la lista con los keys y values del diccionario
-            random_n=random.choice(n)
-            activity_question_number=f"Número de pregunta {activity['number']}"
-            activity_question=f"\nResponda la siguiente pregunta {activity['question']}\n"
-            activity_alternative=f"\nSeleccione su alternativa correcta:\n {activity['alternatives']}"
-            print(f"\t {activity_question_number}")
-            print(f"\t {activity_question}")
-            print(f"\t {activity_alternative}")
-            option=str(input("Ingrese su opcion correcta, tenga cuidado porque si no se escribe una letra perdera su puntaje del turno. Escriba A, B o C: "))
-            try:
-                if option==activity['correct']:
-                    print("Su opcion es correcta. Ha sumado un punto.")
-                    if players[i]==players[0]:
-                        score_player1=score_player1+1
-                    elif players[i]==players[1]:
-                        score_player2=score_player2+1     
-                elif option!=activity['correct']:
-                    print ("Su opcion es incorrecta. No ha sumado puntaje")
-                    print (f"La opcion correcta es {activity['correct']} porque {activity['feedback']}")
-            except ValueError: 
-                print ("Su opcion es incorrecta. No ha sumado puntaje")
-                print (f"La opcion correcta es {activity['correct']} porque {activity['feedback']}")
-        i=i+1
+
+for i in range(number_of_questions):
+    for j in range(2):
+        print("\n================================================================\n")
+        current_player=players[j]
+        print(f"""\nEs el turno del jugador {current_player}""")
+        # Seleccionar una pregunta para el jugador
+        question_key = question_keys.pop(i)  
+        # Obtiene y elimina una pregunta de la lista
+        activity = questions[question_key]
+        # Mostrar pregunta y alternativas
+        activity_question=f"\nResponda la siguiente pregunta {activity['question']}\n"
+        activity_alternative=f"\nSeleccione su alternativa correcta:\n {activity['alternatives']}"
+        print(f"\t {activity_question}")
+        print(f"\t {activity_alternative}")
+        #Obtener respuesta del jugador
+        option=str(input("Ingrese su opcion, tenga cuidado porque si no se escribe una letra perdera su puntaje del turno. Escriba A, B o C: ")).upper()
+        #Verificar respuesta del jugador
+        if option==activity['correct']:
+            print("\nSu opcion es correcta. Ha sumado un punto.")
+            if players[j]==players[0]:
+                score_player1=score_player1+1
+            elif players[j]==players[1]:
+                score_player2=score_player2+1     
+        elif option!=activity['correct']:
+            print ("\nSu opcion es incorrecta. No ha sumado puntaje")
+            print (f"La opcion correcta es {activity['correct']} porque {activity['feedback']}")
+        # Mostrar puntajes actuales
+        print(f"Puntaje actual de {players[0]}: {score_player1}")
+        print(f"Puntaje actual de {players[1]}: {score_player2}")
+
+
+#Determinar ganador
+if score_player1>score_player2:
+    print(f"El ganador es {score_player1}")
+elif score_player1==score_player2:
+    print("Ha habido un empate")
+else: 
+    print(f"El ganador es {score_player2}")
+
+#Mostrar puntaje final
+print(f"""
+    El puntaje final es: 
+    Jugador {players[0]} obtuviste {score_player1} puntos.
+    Jugador {players[1]} obtuviste {score_player2} puntos.
+    """)
