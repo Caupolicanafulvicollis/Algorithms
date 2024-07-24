@@ -1,5 +1,6 @@
+#libreria random para escoger la pregutnas de forma azarosa
 import random
-
+#variable que tiene un diccionario y tiene las 20 preguntas
 questions = {
     'question1': {
         'number': 1,
@@ -203,6 +204,10 @@ questions = {
     }
 }
 
+#================================================================================================================================================================
+#BIENVENIDA
+#IDENTIFICAR AL USUARIO
+#variable 'welcome' para dar la bienvenida a los usuarios
 welcome="""
 =================================================
 BIENVENIDOS AL JUEGO DE TRIVIA DE CIENCIA FICCIÓN
@@ -210,14 +215,17 @@ BIENVENIDOS AL JUEGO DE TRIVIA DE CIENCIA FICCIÓN
 \n
 Ingrese el nombre de los jugadores
 """
-print(welcome)
-
+#variable jugadores en una lista que guarda el nombre de los jugadores
 players=[]
+#ciclo for para ingresar los nombres de jugadores en la varaible 'players'
 for i in range(2):
     player = input(f"\nIngrese el nombre del jugador número {i + 1}: ").strip().title()
     players.append(player)
     print(f"Hola {player}, tú eres el jugador número {i + 1}")
 
+#salida para la bienvenida a los usuarios
+print(welcome)
+#variable instrucciones para entregar informacion a los usuarios. Dentro de esta varaible se llama los datos de la lista 'players' para que los usuarios sientan cercania.
 instructions= f"""
 =================================================================
 
@@ -234,74 +242,118 @@ INSTRUCCIONES DEL JUEGO:
 9. Ganará el jugador que tenga mayor puntaje.
 \n
 """
+#salida de las instrucciones
 print(instructions)
 
+#================================================================================================================================================================
+#INICIO DEL JUEGO
+#CANTIDAD DE PREGUNTAS POR JUGADOR
+#variable de entrada para que el usario ingrese un numero de la cantidad de preguntas por jugador
 number_of_questions=input("""Ingrese la cantidad de preguntas por persona que quieren responder. Debe ingresar un numero entre 1 y 10: """)
+#manejo de errores a partir del tipo de dato que ingresa el usuario
 try:
+    #convierte el input tipo de dato por defecto en 'str'en un 'int'
     number_of_questions=int(number_of_questions)
-    if number_of_questions>20:
-        number_of_questions = 20
+    #chequear que el numero de preguntas sea mayor o igual a 1 y menor o igual a 10 o distinto a un tipo de dato 'int' o 'float'
+    if number_of_questions>=10:
+        #si el usuario ingresa un numero mayor a 10 se entra se activa estas lineas
+        number_of_questions = 10
+        print("El máximo de preguntas por jugador es 10. Se ajustará a 10 preguntas por jugador.")
         print(f"Cada jugador respondera {number_of_questions} preguntas.\n")
     elif number_of_questions<1:
-        print("El número minimo de preguntas es 1. Se ajustará a 1 pregunta por jugador.")
-        print("El número máximo de preguntas es 20. Se ajustará a 20 preguntas por jugador.")
+        #si el usuario ingresa un numero menor a 1 se entra se activa estas lineas
+        print("El minimo de preguntas por jugador es 1. Se ajustará a 1 pregunta por jugador.")
         number_of_questions = 1
         print(f"Cada jugador respondera {number_of_questions} pregunta.\n")
     else: 
+        #si el jugador ingresa un dato número entre 1 a 10 se activa estas lineas        
         print(f"La cantidad de preguntas que debe responder por jugador es de {number_of_questions} preguntas.")
 
 except ValueError:
-    number_of_questions =random.randint(1,20)
+    #si el usuario ingresa un dato que no se puede transformar en una tipo dato 'int'.
+    #ValueError: es una expcecion estandar y se activa cuando el valor de la varaible 'number_of_questions' es incorrecto.
+    #se cambia la variable por un valor azaroso entre 1 a 10 por medio de la funcion .randint() de la libreria random. 
+    number_of_questions =random.randint(1,10)
+    #informacion para el usuario sobre su error, informa lo que hara el programa y la cnatidad de pregutnas que van a responder por jugador 
     print(f"""
         Debe ingresar un numero entre 1 a 20 preguntas por jugador.
         Se le seleccionara la cantidad de preguntas al azar. 
         La cantidad de preguntas que debe responder por jugador es de {number_of_questions} preguntas. \n""")
 
+#INICIO DEL JUEGO
+#variables de los puntajes de los jugadopres antes de partir
 score_player1=0
 score_player2=0
-question_keys=list(questions.keys()) #ingresa en una lista las keys de cada pregunta
-random.shuffle(question_keys) #Barajar las preguntas
-#Asegurarse de tener suficientes pregutnas
+#variable lista que convierte cada pregunta 'keys' en una lista
+question_keys=list(questions.keys()) 
+#Barajar las preguntas con la funcion '.shuffle()' de la libreria random
+random.shuffle(question_keys)
+#Asegurarse de tener suficientes preguntas para que cada jugador responda preguntas azarosas y que no sea repetidas. 
 if len(question_keys) < number_of_questions * 2:
     raise ValueError("No hay suficientes preguntas para el número de turnos.")
-
+#ciclo que se repite hasta la cantidad de preguntas que puso el usuario en el cual deberan presponder cada jugador
+#i es la variable del numero de preguntas que han escogido los usuarios para que responda cada jugador
 for i in range(number_of_questions):
+    #ciclo for que genera los turnos para que jugador responda cada pregunta a partir de la cantidad de preguntas que deberan responder cada jugador
     for j in range(2):
+        #un espacio para dar un orden en pantalla
         print("\n================================================================\n")
+        #varaible que llama el nombre del jugador a partir de la lista 'players' en funcion del turno declarado por la variable j del ciclo for
         current_player=players[j]
         print(f"""\nEs el turno del jugador {current_player}""")
-        # Seleccionar una pregunta para el jugador
+        
+        #SELECCIONAR UNA PREGUNTA PARA EL JUGADOR
+        #variable 'question_key' Obtiene y elimina una pregunta de la lista de la cual fue seleccionada de forma azarosa en el primer ciclo, por eso tiene la variable i. Asi las pregutnas por jugador no se repite 
         question_key = question_keys.pop(i)  
-        # Obtiene y elimina una pregunta de la lista
+        #variable 'activity' toma un keys del diccionario a partir del numero que fue seleccionado al azar por la variable 'question_key'
         activity = questions[question_key]
-        # Mostrar pregunta y alternativas
+
+        #MOSTRAR PREGUNTAS POR JUGADOR
+        #variable que informa al usario a responder la pregunta y que llama la pregunta a paritr del valor 'question' del diccionario 
         activity_question=f"\nResponda la siguiente pregunta {activity['question']}\n"
+        #variable que informa al usario las alternativas de respuesta para la pregunta y que llama las alternativas a partir del valor 'alternatives' del diccionario
         activity_alternative=f"\nSeleccione su alternativa correcta:\n {activity['alternatives']}"
+        #salida de las dos variables
         print(f"\t {activity_question}")
         print(f"\t {activity_alternative}")
         #Obtener respuesta del jugador
+        #se ingresa la respuesta. Si el usuario ingresa en minuscula, el dato 'int' cambia de mayuscula por medio de la funcion .upper()
         option=str(input("Ingrese su respuesta, tenga cuidado porque si no se escribe una letra perdera su puntaje del turno. Escriba A, B o C: ")).upper()
         #Verificar respuesta del jugador
         if option==activity['correct']:
+            #Si la respuesta del jugador es correcta, se suma un punto al puntaje del jugador y se informa al jugador
             print("\nSu respuesta es correcta. Ha sumado un punto.")
+            #si el jugador del turno j es igual al primer jugador de la lista players, perteneciente al primer jugador
             if players[j]==players[0]:
+                #se le suma un punto a la variable 'score_player1'
                 score_player1=score_player1+1
+            #si el jugador del turno j es igual al segundo jugador de la lista players, perteneciente el segundo jugador    
             elif players[j]==players[1]:
+                #se le suma un punto a la variable 'score_player2'
                 score_player2=score_player2+1     
         elif option!=activity['correct']:
+            #Si la respuesta del jugador es incorrecta, se informa al jugador y se le resta un punto al puntaje del jugador.
+            #incluso si ingresa cualquier tipo de dato diferente a la respuesta correcta ejecutan estas lineas
             print ("\nSu respuesta es incorrecta. No ha sumado puntaje")
+            #esta salida llama al valor 'feedback' a la clave pregunta del diccionario para entregar una retroalimentacion al jugador del porque se equivoco.
             print (f"La respuesta correcta es {activity['correct']} porque {activity['feedback']}")
-        # Mostrar puntajes actuales
+        # Mostrar puntajes actuales 
         print(f"Puntaje actual de {players[0]}: {score_player1}")
         print(f"Puntaje actual de {players[1]}: {score_player2}")
+        #se cierran el ciclo de turnos ahora se devuelve al ciclo for que avanza a la siguiente tanda de pregunta que han elegido el usuario para que responda cada jugador. 
 
+#salida para dar orden y separacion a la interfaz de usuario 
 print("\n================================================================\n")
 #Determinar ganador
 if score_player1>score_player2:
+    #si el jugador 1 tiene mayor puntaje que el jugador 2, se genera una una salida que el ganador es el jugador 1 
     print(f"El ganador es {players[0]}")
 elif score_player1==score_player2:
+    #si ambos jugadores tiene los mismos puntaje 
+    #se genera una salida que se ha llevado un empate en el juego de preguntas y se informa que el puntaje es igual para ambos jugadores. 
     print("Ha habido un empate")
 else: 
+    #si el jugador 2 tiene mayor puntaje que el jugador 1, se genera una una salida que el ganador es el jugador 2
     print(f"El ganador es {players[1]}")
 
 #Mostrar puntaje final
