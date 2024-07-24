@@ -280,7 +280,7 @@ instructions= f"""
 
 INSTRUCCIONES DEL JUEGO:
 
-1. Ingrese la cantidad de preguntas que desean responder por jugador. El máximo es de 20 preguntas por jugador.
+1. Ingrese la cantidad de preguntas que desean responder por jugador. El máximo es de 10 preguntas por jugador.
 2. El juego se desarrolla por turnos. La primera pregunta la responde {players[0]}, quien podrá observar las alternativas.
 3. {players[0]}, seleccione la letra de su alternativa correcta.
 4. Una vez ingresada la alternativa correcta de {players[0]}, si la respuesta es correcta, aparecerá un mensaje que dirá "Su respuesta es correcta" y sumará un punto.
