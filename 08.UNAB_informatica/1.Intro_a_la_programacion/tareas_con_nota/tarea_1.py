@@ -204,12 +204,12 @@ questions = {
 }
 
 welcome="""
-    \n
-    =================================================
-    BIENVENIDOS AL JUEGO DE TRIVIA DE CIENCIA FICCIÓN
-    =================================================
-    \n
-    """
+=================================================
+BIENVENIDOS AL JUEGO DE TRIVIA DE CIENCIA FICCIÓN
+=================================================
+\n
+Ingrese el nombre de los jugadores
+"""
 print(welcome)
 
 players=[]
@@ -221,13 +221,13 @@ for i in range(2):
 instructions= f"""
 =================================================================
 
-Instrucciones del juego:
+INSTRUCCIONES DEL JUEGO:
 
 1. Ingrese la cantidad de preguntas que desean responder por jugador. El máximo es de 20 preguntas por jugador.
 2. El juego se desarrolla por turnos. La primera pregunta la responde {players[0]}, quien podrá observar las alternativas.
 3. {players[0]}, seleccione la letra de su alternativa correcta.
 4. Una vez ingresada la alternativa correcta de {players[0]}, si la respuesta es correcta, aparecerá un mensaje que dirá "Su respuesta es correcta" y sumará un punto.
-5. Si la respuesta de {players[0]} es incorrecta, no sumará puntos y recibirá una retroalimentación de la pregunta. Después de la retroalimentación, es el turno de {player[1]}.
+5. Si la respuesta de {players[0]} es incorrecta, no sumará puntos y recibirá una retroalimentación de la pregunta. Después de la retroalimentación, es el turno de {players[1]}.
 6. Ahora es el turno de {players[1]}, quien debe leer la pregunta y seleccionar su alternativa correcta.
 7. {players[1]}, seleccione la letra de su alternativa correcta. Si la respuesta es correcta, sumará un punto. Si es incorrecta, recibirá una retroalimentación de la pregunta.
 8. El juego continuará por turnos hasta completar la cantidad de preguntas seleccionadas por jugador.
@@ -236,7 +236,7 @@ Instrucciones del juego:
 """
 print(instructions)
 
-number_of_questions=input("""\nIngrese la cantidad de preguntas por persona que quieren responder. Debe ingresar un numero entre 1 y 20: """)
+number_of_questions=input("""Ingrese la cantidad de preguntas por persona que quieren responder. Debe ingresar un numero entre 1 y 10: """)
 try:
     number_of_questions=int(number_of_questions)
     if number_of_questions>20:
@@ -264,7 +264,6 @@ random.shuffle(question_keys) #Barajar las preguntas
 #Asegurarse de tener suficientes pregutnas
 if len(question_keys) < number_of_questions * 2:
     raise ValueError("No hay suficientes preguntas para el número de turnos.")
-
 
 for i in range(number_of_questions):
     for j in range(2):
@@ -296,14 +295,14 @@ for i in range(number_of_questions):
         print(f"Puntaje actual de {players[0]}: {score_player1}")
         print(f"Puntaje actual de {players[1]}: {score_player2}")
 
-
+print("\n================================================================\n")
 #Determinar ganador
 if score_player1>score_player2:
-    print(f"El ganador es {score_player1}")
+    print(f"El ganador es {players[0]}")
 elif score_player1==score_player2:
     print("Ha habido un empate")
 else: 
-    print(f"El ganador es {score_player2}")
+    print(f"El ganador es {players[1]}")
 
 #Mostrar puntaje final
 print(f"""
@@ -311,3 +310,4 @@ print(f"""
     Jugador {players[0]} obtuviste {score_player1} puntos.
     Jugador {players[1]} obtuviste {score_player2} puntos.
     """)
+print("\n================================================================\n")
