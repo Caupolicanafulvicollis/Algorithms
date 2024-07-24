@@ -1,6 +1,46 @@
+#Introduccion a la Programación de la Universidad Andres Bello | NRC 2024415 | 
+# Guillermo Enrique Ignacio Vidal Astudillo RUT: 17.597988-3
+""" 
+Este código implementa un juego de trivia de ciencia ficción para dos jugadores. Aquí está la descripción de sus funcionalidades:
+1.Bibliotecas Importadas:
+    - `random`: Para seleccionar preguntas de manera aleatoria.
+
+2.Preguntas:
+    - Una variable `questions` que contiene un diccionario de 20 preguntas. Cada pregunta tiene su número, enunciado, alternativas, respuesta correcta y retroalimentación.
+
+3.Bienvenida:
+    - Muestra un mensaje de bienvenida y solicita los nombres de los jugadores, que se almacenan en la lista `players`.
+
+4.Instrucciones:
+    - Muestra las instrucciones del juego a los jugadores.
+
+5.Cantidad de Preguntas:
+    - Solicita a los jugadores la cantidad de preguntas que desean responder, con un máximo de 10 por jugador. Maneja errores si el usuario ingresa un valor inválido.
+
+6.Inicio del Juego:
+    - Inicializa los puntajes de ambos jugadores.
+    - Baraja las preguntas para asegurarse de que sean seleccionadas aleatoriamente.
+
+7.Desarrollo del Juego:
+    - Alterna entre los jugadores para responder las preguntas.
+    - Muestra la pregunta y las alternativas al jugador actual.
+    - Solicita la respuesta del jugador y verifica si es correcta.
+    - Actualiza el puntaje del jugador según la respuesta.
+    - Muestra retroalimentación en caso de respuesta incorrecta.
+    - Muestra los puntajes actuales después de cada turno.
+
+8.Determinación del Ganador:
+    - Al finalizar el juego, determina y muestra el ganador según los puntajes acumulados.
+    - Muestra el puntaje final de cada jugador.
+
+Este programa proporciona una experiencia interactiva de trivia de ciencia ficción, gestionando turnos, verificando respuestas y manteniendo un puntaje para determinar el ganador.
+""" 
+
+
 #libreria random para escoger la pregutnas de forma azarosa
 import random
-#variable que tiene un diccionario y tiene las 20 preguntas
+#variable que tiene un diccionario y tiene las 20 preguntas.
+#tiene un diccionario dentro de un diccionario
 questions = {
     'question1': {
         'number': 1,
