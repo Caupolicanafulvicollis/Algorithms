@@ -253,7 +253,7 @@ questions = {
 }
 
 #================================================================================================================================================================
-#1. FASE DE CONFIGURACION
+#2. FASE DE CONFIGURACION
 #BIENVENIDA
 #IDENTIFICAR AL USUARIO
 #variable 'welcome' para dar la bienvenida a los usuarios
@@ -264,6 +264,8 @@ BIENVENIDOS AL JUEGO DE TRIVIA DE CIENCIA FICCIÓN
 \n
 Ingrese el nombre de los jugadores
 """
+#salida para la bienvenida a los usuarios
+print(welcome)
 #variable jugadores en una lista que guarda el nombre de los jugadores
 players=[]
 #ciclo for para ingresar los nombres de jugadores en la varaible 'players'
@@ -272,8 +274,6 @@ for i in range(2):
     players.append(player)
     print(f"Hola {player}, tú eres el jugador número {i + 1}")
 
-#salida para la bienvenida a los usuarios
-print(welcome)
 #variable instrucciones para entregar informacion a los usuarios. Dentro de esta varaible se llama los datos de la lista 'players' para que los usuarios sientan cercania.
 instructions= f"""
 =================================================================
@@ -329,6 +329,7 @@ except ValueError:
         Se le seleccionara la cantidad de preguntas al azar. 
         La cantidad de preguntas que debe responder por jugador es de {number_of_questions} preguntas. \n""")
 
+#3.FASE PREGUNTA-RESPUESTA
 #INICIO DEL JUEGO
 #variables de los puntajes de los jugadopres antes de partir
 score_player1=0
@@ -393,6 +394,7 @@ for i in range(number_of_questions):
 
 #salida para dar orden y separacion a la interfaz de usuario 
 print("\n================================================================\n")
+#4. FASE DE CIERRE
 #Determinar ganador
 if score_player1>score_player2:
     #si el jugador 1 tiene mayor puntaje que el jugador 2, se genera una una salida que el ganador es el jugador 1 
