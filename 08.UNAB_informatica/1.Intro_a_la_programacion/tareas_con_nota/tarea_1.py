@@ -1,5 +1,4 @@
-#Introduccion a la Programación de la Universidad Andres Bello | NRC 2024415 | 
-# Guillermo Enrique Ignacio Vidal Astudillo RUT: 17.597988-3
+
 """ 
 Este código implementa un juego de trivia de ciencia ficción para dos jugadores. Aquí está la descripción de sus funcionalidades:
 
