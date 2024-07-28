@@ -1,9 +1,48 @@
-income=int(input('Indique su ingreso en pesos: '))
-children=int(input('Indique el numero de hijos: '))
-ranking=int(input('Indique los anhos de pertenencia al banco: '))
-maritial_status=str(input('Indique su estado civil (S:soltero, C: casado): ')).upper()
-live=str(input('Indique su zona de residencia (R:rural, U:urbano): ')).upper()
-
+while True:
+    try:
+        income=int(input('Indique su ingreso en pesos: '))
+    except ValueError:
+        print('Por favor ingrese un numero entero para su ingreso')
+        continue
+    if income > 0:
+        print('Ingreso aceptado')
+        break
+while True:
+    try:
+        children=int(input('Indique el numero de hijos: '))
+    except ValueError:
+        print('Por favor ingrese un numero entero para el numero de hijos')
+        continue
+    if children >= 0:
+        print('Numero de hijos aceptado')
+        break
+while True:
+    try:
+        ranking=int(input('Indique los anhos de pertenencia al banco: '))
+    except ValueError:
+        print('Por favor ingrese un numero entero para los anhos de pertenencia al banco')
+        continue
+    if ranking >= 0:
+        print('Ranking de pertenencia aceptado')
+        break
+while True:
+    try:
+        maritial_status=str(input('Indique su estado civil (S:soltero, C: casado): ')).upper()
+    except  ValueError:
+        print('Por favor ingrese un estado civil valido (S:soltero, C: casado)')
+        continue
+    if maritial_status in ['S', 'C']:
+        print('Estado civil aceptado')
+        break
+while True:
+    try:
+        live=str(input('Indique su zona de residencia (R:rural, U:urbano): ')).upper()
+    except ValueError:
+        print('Por favor ingrese una zona de residencia valida (R:rural, U:urbano)')
+        continue
+    if live in ['R', 'U']:
+        print('Zona de residencia aceptada')
+        break
 #El banco usara las siguientes reglas: solo una de ellas se aprobara el credito
 #Si el cliente ha pertenecido por más de 10 años al banco y tiene dos o más hijos.
 if ranking>10 and children>=2:
