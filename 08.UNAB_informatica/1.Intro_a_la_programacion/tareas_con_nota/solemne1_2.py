@@ -1,88 +1,54 @@
+listproduct="""
+Lista de productos en Okidoki Market:
+1. Desodorante: $300
+2. Sopa para uno: $2500
+3.Chocolate: $300
+4. Barra de cereal: $600
+5. Agua mineral grande: $1800"""
+optionsbuy="""
+Opciones de compra:
+1. Desodorante          - $300
+2. Sopa para uno        - $2500
+3.Chocolate             - $300
+4. Barra de cereal      - $600
+5. Agua mineral grande  - $1800
+"""
+#precios de los productos
+prices={
+    1: 300,
+    2: 2500,
+    3: 300,
+    4: 600,
+    5: 1800,
+}
+#solicitar el monto de dinero disponible
 while True:
     try:
-        print("Lista de productos en Okidoki Market:")
-        print("1. Desodorante: $300")
-        print("2. Sopa para uno: $2500")
-        print("3.Chocolate: $300")
-        print("4. Barra de cereal: $600")
-        print("5. Agua mineral grande: $1800")
+        print(listproduct)
         account_balance=int(input('Introduce el monto de dinero que tienes en la JUNAEB: '))
+        if account_balance < 0:
+            print('Por favor ingresa un numero positivo.')
+        else:
+            break
     except ValueError:
         print('Por favor ingrese un número entero.')
-        continue
-    if account_balance >= 300:
-        print('Te quedan menos de $300. No puedes hacer mas compras.')
-        break
-    else:
-        while account_balance >= 300:
-            desodorant=300
-            soup=2500 
-            chocolat=1500
-            cereal=600
-            water=1800
-            account_balance=int(input('Introduce el monto de dinero que tienes en la JUNAEB: '))
-            while True:
-                try:    
-                    account_balance=int(input('Introduce el monto de dinero que tienes en la JUNAEB: '))
-                except ValueError:
-                    print('Por favor ingrese un número entero.')
-                    continue
-                if account_balance >= 300:
-                    print('Te quedan menos de $300. No puedes hacer mas compras.')
-                    break
-            print(f'tienes ${account_balance} disponibles')
-            print("Opciones de compra: ")
-            print("1. Desodorante - $300")
-            print("2. Sopa para uno - $2500")
-            print("3.Chocolate - $300")
-            print("4. Barra de cereal - $600")
-            print("5. Agua mineral grande - $1800")
-            product_choice=int(input('¿Qué producto deseas comprar? (1-5): '))
-            try:
-                product_choice=int(input('¿Qué producto deseas comprar? (1-5): '))
-                if product_choice == 1:
-                    if account_balance >= desodorant:
-                        account_balance -= desodorant
-                        print(f'Has comprado un desodorante. Te quedan ${account_balance}')
-                    else:
-                       print('No tienes suficiente dinero para comprar este prodcuto.')
-                    print(f'Tienes ${account_balance} disponibles.')
-                elif product_choice == 2:
-                    if account_balance >= soup:
-                        account_balance -= soup
-                        print(f'Has comprado una sopa para uno. Te quedan ${account_balance}')
-                    else:
-                        print('No tienes suficiente dinero para comprar este prodcuto.')
-                    print(f'Tienes ${account_balance} disponibles.')
-                elif product_choice == 3:
-                    if account_balance >= chocolat:
-                        account_balance -= chocolat
-                        print(f'Has comprado un chocolate. Te quedan ${account_balance}')
-                    else:
-                        print('No tienes suficiente dinero para comprar este prodcuto.')
-                    print(f'Tienes ${account_balance} disponibles.')
-                elif product_choice == 4:
-                    if account_balance >= cereal:
-                        account_balance -= cereal
-                        print(f'Has comprado una barra de cereal. Te quedan ${account_balance}')
-                    else:
-                        print('No tienes suficiente dinero para comprar este prodcuto.')
-                    print(f'Tienes ${account_balance} disponibles.')
-                elif product_choice == 5:
-                    if account_balance >= water:
-                        account_balance -= water
-                        print(f'Has comprado un agua mineral grnade. Te quedan ${account_balance}')
-                    else:
-                        print('No tienes suficiente dinero para comprar este prodcuto.')
-                    print(f'Tienes ${account_balance} disponibles.')
-                else:
-                    print('Te quedan menos de $300. No puedes hacer mas compras.')
-                    print(f'Dinero restante: ${account_balance}')
-            except ValueError:
-                print('Por favor ingrese un número entero entre el 1 al 5.')
-                continue
-            
-
-
-
-    
+#Ciclo de Compras
+while account_balance >= 300:
+    print(f'Tienes ${account_balance} disponibles.')
+    print(optionsbuy)
+    try:
+        product_choice = int(input('¿Qué producto deseas comprar? (1-5): '))
+        if product_choice in prices:
+            if account_balance >= prices[product_choice]:
+                account_balance -= prices[product_choice]
+                print(f'Has comprado el producto. Te quedan ${account_balance}')
+            else:
+                print('No tienes suficiente dinero para comprar este producto.')
+        else:
+            print('Opción inválida. Por favor ingrese un número entre 1 y 5.')
+    except ValueError:
+        print('Por favor ingrese un número entero entre 1 y 5.')
+# Mensaje final si no se puede hacer más compras
+if account_balance < 300:
+    print('Te quedan menos de $300. No puedes hacer más compras.')
+    print(f'Dinero restante: ${account_balance}')
