@@ -1,14 +1,11 @@
 import os
 
 # 1. Capturar las estaturas, pesos, y otros datos de las personas.
-def capture_data():
-    people = []
-    while True:
+def capture_data(num_people):
+    people = load_data_from_file()  # Cargar los datos previos si existen
+    for i in range(num_people):
         try:
-            name = input('Ingrese el nombre de la persona: ')
-            age = int(input(f'Ingrese la edad de {name}: '))
-            if not (1 <= age <= 100):
-                raise ValueError('Edad debe estar entre 1 y 100.')
+            name = input(f'Ingrese el nombre de la persona {i + 1}: ')
             
             weight = float(input(f'Ingrese el peso de {name} en kg: '))
             if not (0 <= weight <= 300):
@@ -18,28 +15,20 @@ def capture_data():
             if not (0.5 <= height <= 2.5):
                 raise ValueError('Altura debe estar entre 0.5 y 2.5 metros.')
 
-            sex = input(f'Ingrese el sexo de {name} (M/F): ').upper()
-            if sex not in ('M', 'F'):
-                raise ValueError('Sexo debe ser M o F.')
-
             imc = round(weight / (height ** 2), 2)
             
             person = {
                 'name': name,
-                'age': age,
                 'weight': weight,
                 'height': height,
-                'sex': sex,
                 'imc': imc
             }
             people.append(person)
 
-            if len(people) >= 5:  # Se detiene después de capturar 5 personas
-                break
-
         except ValueError as e:
             print(f'Error: {e}. Por favor, ingrese los datos nuevamente.')
     
+    save_data_to_file(people)  # Guardar los datos al finalizar la captura
     return people
 
 # 2. Mostrar el listado con aquellos IMC sobre el valor promedio.
@@ -76,18 +65,46 @@ def show_weight_categories(people):
 def save_data_to_file(people, filename="registros_pacientes.txt"):
     with open(filename, 'w') as file:
         for person in people:
-            file.write(f"Nombre: {person['name']}\n")
-            file.write(f"Edad: {person['age']}\n")
-            file.write(f"Peso: {person['weight']} kg\n")
-            file.write(f"Estatura: {person['height']} m\n")
-            file.write(f"Sexo: {person['sex']}\n")
-            file.write(f"IMC: {person['imc']}\n")
-            file.write("-" * 30 + "\n")
+            file.write(f"{person['name']},{person['weight']},{person['height']}\n")
     print(f"Los datos han sido guardados en el archivo {filename}")
+
+# 6. Cargar los datos de estaturas y pesos desde el archivo .txt.
+def load_data_from_file(filename="registros_pacientes.txt"):
+    people = []
+    if os.path.exists(filename):
+        with open(filename, 'r') as file:
+            for line in file:
+                name, weight, height = line.strip().split(',')
+                imc = round(float(weight) / (float(height) ** 2), 2)
+                people.append({
+                    'name': name,
+                    'weight': float(weight),
+                    'height': float(height),
+                    'imc': imc
+                })
+        print(f"Datos cargados desde {filename}")
+    return people
+
+# 7. Borrar los datos del archivo .txt.
+def delete_data_file(filename="registros_pacientes.txt"):
+    if os.path.exists(filename):
+        os.remove(filename)
+        print(f"El archivo {filename} ha sido borrado.")
+    else:
+        print(f"No se encontró el archivo {filename}.")
+
+# 8. Mostrar los datos cargados desde el archivo.
+def show_loaded_data(people):
+    if people:
+        print("Datos cargados:")
+        for person in people:
+            print(f"Nombre: {person['name']}, Peso: {person['weight']} kg, Estatura: {person['height']} m, IMC: {person['imc']}")
+    else:
+        print("No hay datos cargados para mostrar.")
 
 # Menú principal
 def menu():
-    people = []
+    people = load_data_from_file()  # Cargar datos respaldados al inicio
     while True:
         print('''
 CONTROL DE ÍNDICES DE MASA CORPORAL
@@ -101,12 +118,16 @@ Seleccione su opción introduciendo el número de su opción:
 3. Mostrar el IMC máximo y mínimo registrado.
 4. Mostrar la cantidad de personas con bajo peso, peso normal, sobre peso y obesidad.
 5. Guardar los registros en un archivo.
-6. Salir del programa.
+6. Borrar los datos del archivo.
+7. Mostrar los datos cargados desde el archivo.
+8. Salir del programa.
 ''')
         try:
             option = int(input('Ingrese el número de su opción: '))
             if option == 1:
-                people = capture_data()
+                num_people = int(input("¿Cuántas personas desea registrar? "))
+                people = capture_data(num_people)
+                save_data_to_file(people)  # Hacer respaldo al terminar de capturar datos
             elif option == 2 and people:
                 show_overweight_people(people)
             elif option == 3 and people:
@@ -116,6 +137,11 @@ Seleccione su opción introduciendo el número de su opción:
             elif option == 5 and people:
                 save_data_to_file(people)
             elif option == 6:
+                delete_data_file()  # Borrar los datos del archivo
+                people = []  # Vaciar la lista de personas en memoria
+            elif option == 7:
+                show_loaded_data(people)  # Mostrar los datos cargados desde el archivo
+            elif option == 8:
                 print('Saliendo del programa.')
                 break
             else:
