@@ -1,6 +1,5 @@
 import os
-
-import os  # Necesario para comprobar y eliminar archivos
+# Necesario para comprobar y eliminar archivos
 
 '''
 Resumen del Programa:
