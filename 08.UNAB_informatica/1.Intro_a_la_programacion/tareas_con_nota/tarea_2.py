@@ -1,4 +1,3 @@
-#Introduccion a la programacion | 2484 | Guillermo Vidal Astudillo RUT 17597988-3
 import os
 # Necesario para comprobar y eliminar archivos
 
