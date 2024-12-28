@@ -6,34 +6,30 @@ Este directorio ofrece una colección integral de 400 ejercicios resueltos en Py
 
 ## ✨ Contenido del Directorio
 
-### 📜 Temas y Ejercicios
- 1. [Variables, Operadores, Condicionales y Bucles](#1.-Variables,-Operadores,-Condicionales-y-Bucles)
- 2. **Lista, tuplas, conjuntos, diccionarios**
- 3. **Mas diccionarios, listas, tuplas, conjuntos**
- 4. **Validación de datos de entrada**
- 5. **Funciones de Orden Superior**
- 6. **Recursividad**
- 7. **Pilas y Colas**
- 8. **Programación Orientada o objetos**
- 9. **Listas enlazadas, colas, pilas con POO**
- 10. **Árboles**
- 11. **+ Recursividad**
- 12. **+ Pilas, + Colas**
- 13. **Grafos**
- 14. **Matrices**
- 15. **Funciones de Hash y tablas**
- 16. **+ Archivos**
- 17. **Ciencias de datos, ML e IA**
- 18. **Machine Learning** 
- 19. **Inteligencia Artificial**
+### 📜 Índice
+### 📜 Índice
+ 1. [Variables, Operadores, Condicionales y Bucles](#variables-operadores-condicionales-y-bucles)
+ 2. [Lista, tuplas, conjuntos, diccionarios](#lista-tuplas-conjuntos-diccionarios)
+ 3. [Mas diccionarios, listas, tuplas, conjuntos](#mas-diccionarios-listas-tuplas-conjuntos)
+ 4. [Validación de datos de entrada](#validación-de-datos-de-entrada)
+ 5. [Funciones de Orden Superior](#funciones-de-orden-superior)
+ 6. [Recursividad](#recursividad)
+ 7. [Pilas y Colas](#pilas-y-colas)
+ 8. [Programación Orientada a Objetos](#programación-orientada-a-objetos)
+ 9. [Listas enlazadas, colas, pilas con POO](#listas-enlazadas-colas-pilas-con-poo)
+ 10. [Árboles](#árboles)
+ 11. [+ Recursividad](#-recursividad)
+ 12. [+ Pilas, + Colas](#-pilas--colas)
+ 13. [Grafos](#grafos)
+ 14. [Matrices](#matrices)
+ 15. [Funciones de Hash y tablas](#funciones-de-hash-y-tablas)
+ 16. [+ Archivos](#-archivos)
+ 17. [Ciencias de datos, ML e IA](#ciencias-de-datos-ml-e-ia)
+ 18. [Machine Learning](#machine-learning)
+ 19. [Inteligencia Artificial](#inteligencia-artificial)
 
-#### 1. Variables, Operadores, Condicionales y Bucles
 
-- Solicitar un nombre y mostrar un mensaje personalizado.
-- Realizar operaciones básicas como suma, resta, multiplicación y división.
-- Contar números pares y divisibles en un rango.
-- Generar patrones y figuras con bucles.
-
+### Variables, Operadores, Condicionales y Bucles (id="Variables")
    **Ejercicios**
    - [Ejercicio 1](01.ejercicio.py)
    - [Ejercicio 2](02.ejercicio.py)
