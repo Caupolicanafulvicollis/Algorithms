@@ -9,11 +9,11 @@ Este directorio ofrece una colección integral de 400 ejercicios resueltos en Py
 ### 📜 Temas y Ejercicios
 
 #### 1. **Variables, Operadores, Condicionales y Bucles**  
-      [Ejercicios destacados:](#)
-      - Solicitar un nombre y mostrar un mensaje personalizado.
-      - Realizar operaciones básicas como suma, resta, multiplicación y división.
-      - Contar números pares y divisibles en un rango.
-      - Generar patrones y figuras con bucles.
+[Ejercicios destacados:](#)
+- Solicitar un nombre y mostrar un mensaje personalizado.
+- Realizar operaciones básicas como suma, resta, multiplicación y división.
+- Contar números pares y divisibles en un rango.
+- Generar patrones y figuras con bucles.
      
 
 3. **Funciones**  
