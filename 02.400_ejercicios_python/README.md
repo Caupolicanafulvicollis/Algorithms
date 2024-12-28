@@ -27,7 +27,7 @@ Este directorio ofrece una colección integral de 400 ejercicios resueltos en Py
  18. **Machine Learning** 
  19. **Inteligencia Artificial**
 
-#### 1. **Variables, Operadores, Condicionales y Bucles**  
+#### 1. **Variables, Operadores, Condicionales y Bucles**
 
 - Solicitar un nombre y mostrar un mensaje personalizado.
 - Realizar operaciones básicas como suma, resta, multiplicación y división.
