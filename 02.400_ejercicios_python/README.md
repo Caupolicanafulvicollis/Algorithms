@@ -8,47 +8,48 @@ Este directorio ofrece una colección integral de 400 ejercicios resueltos en Py
 
 ### 📜 Temas y Ejercicios
 
-1. **Variables, Operadores, Condicionales y Bucles**  
-   [Ejercicios destacados:](#)
-   - Solicitar un nombre y mostrar un mensaje personalizado.
-   - Realizar operaciones básicas como suma, resta, multiplicación y división.
-   - Contar números pares y divisibles en un rango.
-   - Generar patrones y figuras con bucles.
+#### 1. **Variables, Operadores, Condicionales y Bucles**  
+      [Ejercicios destacados:](#)
+      - Solicitar un nombre y mostrar un mensaje personalizado.
+      - Realizar operaciones básicas como suma, resta, multiplicación y división.
+      - Contar números pares y divisibles en un rango.
+      - Generar patrones y figuras con bucles.
+     
 
-2. **Funciones**  
+3. **Funciones**  
    [Ejercicios destacados:](#)
    - Crear funciones como `EsMultiplo`, `calcularMaxMin` y `Login`.
    - Implementar algoritmos como el MCD usando el método de Euclides.
    - Funciones recursivas para factoriales y números de Fibonacci.
 
-3. **Estructuras de Datos (Listas, Tuplas, Conjuntos, Diccionarios)**  
+4. **Estructuras de Datos (Listas, Tuplas, Conjuntos, Diccionarios)**  
    [Ejercicios destacados:](#)
    - Manejo de listas para sumar, filtrar y crear nuevas estructuras.
    - Operaciones avanzadas con tuplas, conjuntos y diccionarios.
    - Gestión de datos estructurados como inventarios y registros.
 
-4. **Recursividad**  
+5. **Recursividad**  
    [Ejercicios destacados:](#)
    - Resolución de problemas clásicos como Torres de Hanói.
    - Generación de subconjuntos y combinaciones.
    - Recorridos en árboles y grafos.
 
-5. **Programación Orientada a Objetos**  
+6. **Programación Orientada a Objetos**  
    [Ejercicios destacados:](#)
    - Clases básicas como `Perro`, `Rectangulo` y `Estudiante`.
    - Gestión de estructuras más complejas como bancos, inventarios y restaurantes.
 
-6. **Estructuras Avanzadas (Listas Enlazadas, Pilas, Colas)**  
+7. **Estructuras Avanzadas (Listas Enlazadas, Pilas, Colas)**  
    [Ejercicios destacados:](#)
    - Implementación de pilas y colas con estructuras enlazadas.
    - Simulación de procesos y tareas con estructuras avanzadas.
 
-7. **Algoritmos de Grafos**  
+8. **Algoritmos de Grafos**  
    [Ejercicios destacados:](#)
    - Representación de grafos y búsqueda de caminos.
    - Algoritmos avanzados como Dijkstra, Floyd-Warshall y Kruskal.
 
-8. **Ciencia de Datos, Machine Learning e IA**  
+9. **Ciencia de Datos, Machine Learning e IA**  
    [Ejercicios destacados:](#)
    - Limpieza, visualización y modelado de datos.
    - Implementación de algoritmos de clustering y regresión.
