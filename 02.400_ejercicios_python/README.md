@@ -7,7 +7,6 @@ Este directorio ofrece una colección integral de 400 ejercicios resueltos en Py
 ## ✨ Contenido del Directorio
 
 ### 📜 Índice
-### 📜 Índice
  1. [Variables, Operadores, Condicionales y Bucles](#variables,-operadores,-condicionales-y-bucles)
  2. [Lista, tuplas, conjuntos, diccionarios](#lista-tuplas-conjuntos-diccionarios)
  3. [Mas diccionarios, listas, tuplas, conjuntos](#mas-diccionarios-listas-tuplas-conjuntos)
@@ -29,7 +28,7 @@ Este directorio ofrece una colección integral de 400 ejercicios resueltos en Py
  19. [Inteligencia Artificial](#inteligencia-artificial)
 
 
-### Variables, Operadores, Condicionales y Bucles (id="Variables")
+### Variables, Operadores, Condicionales y Bucles
    **Ejercicios**
    - [Ejercicio 1](01.ejercicio.py)
    - [Ejercicio 2](02.ejercicio.py)
