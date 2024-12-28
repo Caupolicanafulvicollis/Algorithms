@@ -7,7 +7,7 @@ Este directorio ofrece una colección integral de 400 ejercicios resueltos en Py
 ## ✨ Contenido del Directorio
 
 ### 📜 Temas y Ejercicios
- 1. [Variables, Operadores, Condicionales y Bucles](#"1. **Variables, Operadores, Condicionales y Bucles**")
+ 1. [Variables, Operadores, Condicionales y Bucles](#"1.-**Variables,-Operadores,-Condicionales-y-Bucles**")
  2. **Lista, tuplas, conjuntos, diccionarios**
  3. **Mas diccionarios, listas, tuplas, conjuntos**
  4. **Validación de datos de entrada**
@@ -36,17 +36,19 @@ Este directorio ofrece una colección integral de 400 ejercicios resueltos en Py
 
    **Ejercicios**
    - [Ejercicio 1](01.ejercicio.py)
-
-[Ejercicio 2]()
-[Ejercicio 3]()
-[Ejercicio 4]()
-[Ejercicio 4]()
-[Ejercicio 4]()
-[Ejercicio 4]()
-[Ejercicio 4]()
-[Ejercicio 4]()
-[Ejercicio 4]()
-
+   - [Ejercicio 2](02.ejercicio.py)
+   - [Ejercicio 3](03.ejercicio.py)
+   - [Ejercicio 4](04.ejercicio.py)
+   - [Ejercicio 5](05.ejercicio.py)
+   - [Ejercicio 6](06.ejercicio.py)
+   - [Ejercicio 7](07.ejercicio.py)
+   - [Ejercicio 8](08.ejercicio.py)
+   - [Ejercicio 9](09.ejercicio.py)
+   - [Ejercicio 10](10.ejercicio.py)
+   - [Ejercicio 11](11.ejercicio.py)
+   - [Ejercicio 12](12.ejercicio.py)
+   - [Ejercicio 13](13.ejercicio.py)
+   - [Ejercicio 14](14.ejercicio.py)
 
 3. **Funciones**  
    [Ejercicios destacados:](#)
