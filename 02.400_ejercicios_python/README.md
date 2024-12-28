@@ -7,14 +7,43 @@ Este directorio ofrece una colección integral de 400 ejercicios resueltos en Py
 ## ✨ Contenido del Directorio
 
 ### 📜 Temas y Ejercicios
+ 1. [Variables, Operadores, Condicionales y Bucles](#1. **Variables, Operadores, Condicionales y Bucles**  )
+ 2. **Lista, tuplas, conjuntos, diccionarios**
+ 3. **Mas diccionarios, listas, tuplas, conjuntos**
+ 4. **Validación de datos de entrada**
+ 5. **Funciones de Orden Superior**
+ 6. **Recursividad**
+ 7. **Pilas y Colas**
+ 8. **Programación Orientada o objetos**
+ 9. **Listas enlazadas, colas, pilas con POO**
+ 10. **Árboles**
+ 11. **+ Recursividad**
+ 12. **+ Pilas, + Colas**
+ 13. **Grafos**
+ 14. **Matrices**
+ 15. **Funciones de Hash y tablas**
+ 16. **+ Archivos**
+ 17. **Ciencias de datos, ML e IA**
+ 18. **Machine Learning** 
+ 19. **Inteligencia Artificial**
 
 #### 1. **Variables, Operadores, Condicionales y Bucles**  
-[Ejercicios destacados:](#)
+
 - Solicitar un nombre y mostrar un mensaje personalizado.
 - Realizar operaciones básicas como suma, resta, multiplicación y división.
 - Contar números pares y divisibles en un rango.
 - Generar patrones y figuras con bucles.
-     
+[Ejercicio 1](https://github.com/Caupolicanafulvicollis/Algorithms/blob/main/02.400_ejercicios_python/01.ejercicio.py)
+[Ejercicio 2]()
+[Ejercicio 3]()
+[Ejercicio 4]()
+[Ejercicio 4]()
+[Ejercicio 4]()
+[Ejercicio 4]()
+[Ejercicio 4]()
+[Ejercicio 4]()
+[Ejercicio 4]()
+
 
 3. **Funciones**  
    [Ejercicios destacados:](#)
