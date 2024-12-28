@@ -33,7 +33,10 @@ Este directorio ofrece una colección integral de 400 ejercicios resueltos en Py
 - Realizar operaciones básicas como suma, resta, multiplicación y división.
 - Contar números pares y divisibles en un rango.
 - Generar patrones y figuras con bucles.
-[Ejercicio 1](https://github.com/Caupolicanafulvicollis/Algorithms/blob/main/02.400_ejercicios_python/01.ejercicio.py)
+
+   **Ejercicios**
+   - [Ejercicio 1](docs/01.ejercicio.py)
+   
 [Ejercicio 2]()
 [Ejercicio 3]()
 [Ejercicio 4]()
