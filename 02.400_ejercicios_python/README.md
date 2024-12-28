@@ -8,7 +8,7 @@ Este directorio ofrece una colección integral de 400 ejercicios resueltos en Py
 
 ### 📜 Índice
 ### 📜 Índice
- 1. [Variables, Operadores, Condicionales y Bucles](#variables-operadores-condicionales-y-bucles)
+ 1. [Variables, Operadores, Condicionales y Bucles](#variables,-operadores,-condicionales-y-bucles)
  2. [Lista, tuplas, conjuntos, diccionarios](#lista-tuplas-conjuntos-diccionarios)
  3. [Mas diccionarios, listas, tuplas, conjuntos](#mas-diccionarios-listas-tuplas-conjuntos)
  4. [Validación de datos de entrada](#validación-de-datos-de-entrada)
