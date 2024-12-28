@@ -35,8 +35,8 @@ Este directorio ofrece una colección integral de 400 ejercicios resueltos en Py
 - Generar patrones y figuras con bucles.
 
    **Ejercicios**
-   - [Ejercicio 1](docs/01.ejercicio.py)
-   
+   - [Ejercicio 1](01.ejercicio.py)
+
 [Ejercicio 2]()
 [Ejercicio 3]()
 [Ejercicio 4]()
