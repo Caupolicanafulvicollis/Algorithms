@@ -1,52 +1,53 @@
-# 📚 Algoritmos
+# 📚 Algoritmos en Python
 
-Este repositorio ofrece una amplia colección de apuntes y ejemplos prácticos relacionados con diversas áreas de las ciencias de los algoritmos. Su objetivo es servir como recurso de estudio y referencia para estudiantes y profesionales interesados en profundizar en el diseño y la implementación de algoritmos.
+Este repositorio ofrece una amplia colección de algoritmos y ejemplos prácticos implementados en Python. Su propósito es servir como referencia y material de estudio para estudiantes, entusiastas y profesionales interesados en las ciencias de los algoritmos, cubriendo desde conceptos básicos hasta temas avanzados.
 
 ---
 
 ## 📂 Contenido del Repositorio
 
-- [📂 **01. Miscellaneous**](https://github.com/Caupolicanafulvicollis/Algorithms/tree/main/01.Miscellaneous)  
-  Incluye una variedad de algoritmos y ejercicios misceláneos para reforzar conceptos básicos y avanzados. Esta carpeta es ideal para repasar y explorar temas diversos en algoritmos.
+### 1. [📂 **01. Miscellaneous**](https://github.com/Caupolicanafulvicollis/Algorithms/tree/main/01.Miscellaneous)  
+Incluye una variedad de algoritmos y ejercicios misceláneos para reforzar conceptos básicos y avanzados. Es ideal para repasar y explorar temas diversos en algoritmos.
 
-- [📂 **02. 400 Ejercicios Python**](https://github.com/Caupolicanafulvicollis/Algorithms/tree/main/02.400_ejercicios_python)  
-  Contiene 400 ejercicios resueltos en Python, ideales para principiantes y avanzados. Este recurso cubre temas desde estructuras de datos hasta programación funcional.
+### 2. [📂 **02. 400 Ejercicios Python**](https://github.com/Caupolicanafulvicollis/Algorithms/tree/main/02.400_ejercicios_python)  
+Contiene 400 ejercicios resueltos en Python, ideales para principiantes y avanzados. Este recurso abarca temas desde estructuras de datos hasta aplicaciones de inteligencia artificial.
 
-- [📂 **03. Algorithms Genetic**](https://github.com/Caupolicanafulvicollis/Algorithms/tree/main/03.Algorithms_genetic)  
-  Presenta implementaciones de algoritmos genéticos, ilustrando técnicas de optimización basadas en procesos evolutivos.
+### 3. [📂 **03. Algorithms Genetic**](https://github.com/Caupolicanafulvicollis/Algorithms/tree/main/03.Algorithms_genetic)  
+Presenta implementaciones de algoritmos genéticos, ilustrando técnicas de optimización inspiradas en procesos evolutivos.
 
-- [📂 **04. Recursion**](https://github.com/Caupolicanafulvicollis/Algorithms/tree/main/04.Recursion)  
-  Ejemplos de problemas resueltos con recursividad, desde simples hasta complejos, que abarcan temas como la búsqueda binaria y el procesamiento de árboles.
+### 4. [📂 **04. Recursion**](https://github.com/Caupolicanafulvicollis/Algorithms/tree/main/04.Recursion)  
+Ejercicios y ejemplos prácticos que abarcan temas básicos y avanzados de recursión, incluyendo árboles y algoritmos de búsqueda.
 
-- [📂 **05. Logic Gates**](https://github.com/Caupolicanafulvicollis/Algorithms/tree/main/05.logic_gates)  
-  Incluye implementaciones y simulaciones de puertas lógicas, esenciales para comprender los fundamentos de la lógica digital.
+### 5. [📂 **05. Logic Gates**](https://github.com/Caupolicanafulvicollis/Algorithms/tree/main/05.logic_gates)  
+Implementaciones y simulaciones de puertas lógicas, esenciales para comprender los fundamentos de la lógica digital y la computación.
 
-- [📂 **06. Recursive**](https://github.com/Caupolicanafulvicollis/Algorithms/tree/main/06.Recursive)  
-  Ofrece una colección adicional de ejercicios sobre recursividad, organizados en subcarpetas según el nivel de dificultad.
-  Dividida en subcarpetas:
-- **Basic Recursion:** Factores y series simples.  
-- **Intermediate Recursion:** Problemas como búsqueda binaria.  
+### 6. [📂 **06. Recursive**](https://github.com/Caupolicanafulvicollis/Algorithms/tree/main/06.Recursive)  
+Ofrece ejercicios organizados por nivel de dificultad:  
+- **Basic Recursion:** Cálculo de factoriales y Fibonacci.  
+- **Intermediate Recursion:** Búsqueda binaria recursiva.  
 - **Advanced Recursion:** Torres de Hanói y backtracking.
-  
-- [📂 **07. Tools**](https://github.com/Caupolicanafulvicollis/Algorithms/tree/main/07.Tools)  
-  Compila herramientas y utilidades relacionadas con el desarrollo y análisis de algoritmos.
-  
-- [📂 **08. UNAB Informática**](https://github.com/Caupolicanafulvicollis/Algorithms/tree/main/08.UNAB_informatica)  
-  Recopila materiales y ejercicios del curso de informática de la Universidad Andrés Bello, útiles para estudiantes de dicha institución.
 
-- [📂 **09. HackerRank**](https://github.com/Caupolicanafulvicollis/Algorithms/tree/main/09.HackerRank)  
-  Contiene soluciones a desafíos de programación de la plataforma HackerRank, facilitando la preparación para competencias y entrevistas técnicas.
+### 7. [📂 **07. Tools**](https://github.com/Caupolicanafulvicollis/Algorithms/tree/main/07.Tools)  
+Recopilación de herramientas y utilidades para desarrollar y analizar algoritmos.
 
-- [📂 **10. Coddy.tech**](https://github.com/Caupolicanafulvicollis/Algorithms/tree/main/10.coddy.tech)  
-  Incluye materiales y ejercicios relacionados con la plataforma coddy.tech, enfocada en el aprendizaje interactivo de programación.
+### 8. [📂 **08. UNAB Informática**](https://github.com/Caupolicanafulvicollis/Algorithms/tree/main/08.UNAB_informatica)  
+Material relacionado con el curso de informática de la Universidad Andrés Bello, incluyendo apuntes y ejercicios.
 
-- [📂 **Miscellaneous**](https://github.com/Caupolicanafulvicollis/Algorithms/tree/main/miscellaneous)  
-  Alberga otros materiales y ejercicios diversos que no encajan en las categorías anteriores, ofreciendo recursos adicionales de aprendizaje.
+### 9. [📂 **09. HackerRank**](https://github.com/Caupolicanafulvicollis/Algorithms/tree/main/09.HackerRank)  
+Contiene soluciones a desafíos de programación en HackerRank, útiles para prepararse para entrevistas técnicas.
+
+### 10. [📂 **10. Coddy.tech**](https://github.com/Caupolicanafulvicollis/Algorithms/tree/main/10.coddy.tech)  
+Ejercicios interactivos y recursos relacionados con la plataforma Coddy.tech para el aprendizaje dinámico de programación.
+
+### 11. [📂 **Miscellaneous**](https://github.com/Caupolicanafulvicollis/Algorithms/tree/main/miscellaneous)  
+Material adicional que no encaja en otras categorías, ofreciendo recursos diversos para el aprendizaje de algoritmos.
+
+---
 
 ## 🛠️ Tecnologías Utilizadas
 
 - **Lenguaje de Programación:** Python 3.x  
-- **Entorno de Desarrollo:** Scripts y notebooks organizados en carpetas temáticas para facilitar la navegación y el estudio.
+- **Entorno de Desarrollo:** Scripts y notebooks organizados temáticamente para facilitar el aprendizaje.
 
 ---
 
@@ -59,22 +60,22 @@ Este repositorio ofrece una amplia colección de apuntes y ejemplos prácticos r
    ```
 
 2. **Explorar las Carpetas:**  
-   Navega por las diferentes carpetas para identificar los temas de tu interés y accede a los scripts correspondientes.
+   Navega por los directorios para identificar los temas de tu interés.
 
 3. **Ejecutar los Scripts:**  
-   Asegúrate de tener Python 3.x instalado. Ejecuta los scripts desde la línea de comandos o con un IDE.
+   Asegúrate de tener Python 3.x instalado. Ejecuta los ejemplos desde un IDE o directamente en la terminal.
 
 4. **Modificar y Experimentar:**  
-   Siéntete libre de modificar los ejemplos y ejercicios para adaptarlos a tus necesidades y profundizar en tu comprensión de los algoritmos.
+   Siéntete libre de personalizar los algoritmos para adaptarlos a tus necesidades y profundizar en su funcionamiento.
 
 ---
 
 ## 👥 Contribuciones
 
 ¡Tu colaboración es bienvenida!  
-- **Reporta Errores:** Abre un _issue_.  
-- **Propón Mejoras:** Sugiere actualizaciones.  
-- **Envía Pull Requests:** Implementa tus mejoras y somételas a revisión.
+- **Reporta Errores:** Si encuentras un problema, abre un _issue_.  
+- **Propón Mejoras:** Sugiere actualizaciones o nuevas funcionalidades.  
+- **Envía Pull Requests:** Implementa tus mejoras y compártelas con la comunidad.
 
 ---
 
@@ -84,4 +85,6 @@ Este proyecto está bajo la Licencia MIT. Consulta el archivo `LICENSE` para má
 
 ---
 
-¡Gracias por tu interés en este repositorio! 🚀
+## 🌟 ¡Gracias!
+
+Gracias por tu interés en este repositorio. Explora, aprende y contribuye para mejorar este recurso y fomentar el aprendizaje colectivo. 🚀
