@@ -28,7 +28,7 @@ Este directorio ofrece una colección integral de 400 ejercicios resueltos en Py
  19. [Inteligencia Artificial](#inteligencia-artificial)
 
 
-### [Variables, Operadores, Condicionales y Bucles](01.variables-operadores-condicionales-y-bucles)
+### [Variables, Operadores, Condicionales y Bucles](https://github.com/Caupolicanafulvicollis/Algorithms/tree/main/02.400_ejercicios_python/01.variables-operadores-expresiones-condicionales-bucles)
    **Ejercicios**
    - [Ejercicio 1](01.variables-operadores-expresiones-condicionales-bucles/01.ejercicio.py)  
       - Hacer un programa donde se pida un nombre por teclado y se imprima “Hola ..el_nombre_ingresado".
