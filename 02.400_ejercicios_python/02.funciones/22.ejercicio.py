@@ -1,12 +1,10 @@
-def mcd_euclides():
-    a=150//39
-    b=150%39
-    # 150 = 39*3 + 33
-    # 39 = 33*1 + 6
-    # 33 = 6*5 + 3 el mcd es el 3
-    # 6 = 3*2 + 0
+#algoritmo de Euclides para calcular el MCD de dos números enteros positivos
 
-    return 0 
+def mcd_euclides(a,b):  
+    if b==0:
+        print(a)
+    elif b!=0:
+        return mcd_euclides(b,a%b)
 
 if __name__ == "__main__":
     num1=int(input("Introduce el primer numero: "))
@@ -15,6 +13,3 @@ if __name__ == "__main__":
         mcd_euclides(num1,num2)
     else:
         mcd_euclides(num2,num1)
-    
-    print(a)
-    print(b)
