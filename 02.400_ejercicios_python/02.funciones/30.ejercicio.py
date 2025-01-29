@@ -8,11 +8,11 @@ def validar_vocal(mensaje):
             print("Ingrese una letra válida")
 
 def es_vocal(letra):
-    return letra.lower() in "aeiou"
+    if letra.lower() in "aeiou":
+        return True
+    else:
+        return False
 
 if __name__ == "__main__":
-    letra=validar_vocal("Ingrese una letra: ")
-    if es_vocal(letra):
-        print("La letra es vocal")
-    else:
-        print("La letra no es vocal")
+    letra=es_vocal(validar_vocal("Ingrese una letra: "))
+    print(letra)
