@@ -3,45 +3,35 @@ m=0
 a=0
 total=0
 bisiesto=False
-mes_bisiesto={
-        1:31,
-        2:28,
-        3:31,
-        4:30,
-        5:31,
-        6:30,
-        7:31,
-        8:31,
-        9:30,
-        10:31,
-        11:30,
-        12:31
-    }
-mes_no_bisiesto={
-        1:31,
-        2:29,
-        3:31,
-        4:30,
-        5:31,
-        6:30,
-        7:31,
-        8:31,
-        9:30,
-        10:31,
-        11:30,
-        12:31
-    }
+# Diccionarios de días por mes
+mes_bisiesto = {
+    1: 31, 2: 29, 3: 31, 4: 30, 5: 31, 6: 30, 7: 31,
+    8: 31, 9: 30, 10: 31, 11: 30, 12: 31
+}
+mes_no_bisiesto = {
+    1: 31, 2: 28, 3: 31, 4: 30, 5: 31, 6: 30, 7: 31,
+    8: 31, 9: 30, 10: 31, 11: 30, 12: 31
+}
 
 def menu():
-    print("Detector de dia juliano \n introduzca la fecha \n")
-    leer_fecha()
-    mes()
-    es_bisiesto()
-    calcular_juliano()
-    #total de dias
-    print(f"El dia juliano para la fecha {d}-{m}-{a} es {total}")
+    print("Detector de día juliano \nIntroduzca la fecha\n")
+    
+    # Leer la fecha correctamente
+    d, m, a = leer_fecha()
+    
+    # Determinar si el año es bisiesto
+    bisiesto = es_bisiesto(a)
+    
+    # Calcular el total de días hasta el mes anterior
+    total = calcular_total_meses(m, bisiesto)
+    
+    # Sumar los días del mes actual
+    total = calcular_juliano(d, total)
 
-def leer_fecha(d,m,a):
+    # Imprimir el resultado final
+    print(f"El día juliano para la fecha {d}-{m}-{a} es {total}")
+
+def leer_fecha():
     while True:
         try: 
             d=int(input("introduzca el día: "))
@@ -49,69 +39,40 @@ def leer_fecha(d,m,a):
             a=int(input("introduzca el año: "))
             if not (1<=d<=31):
                 print("debe ingresar un dia entre el 1 al 31: ")
-                d=int(input("introduzca el día: "))
-            elif not (1>=m>=12):
+                continue
+            if not (1<=m<=12):
                 print("debe ingresar un mes entre el 1 al 12: ")
-                m=int(input("introduzca el mes: "))
-            elif a <= 0:
+                continue
+            if a <= 0:
                 print("debe ser un numero entero positivo: ")
-                a=int(input("introduzca el año: "))
-            else:
-                return d,m,a
-            dia_del_mes(m)
-            es_bisiesto(a)
-
+                continue
+            return d,m,a
         except ValueError:
             raise ValueError("Debe cumplir con lo solicitado")
 
+# Función para determinar si es bisiesto
 def es_bisiesto(a):
-    if a % 4 != 0:  # No es divisible entre 4
-        print(f"El año {a} no es bisiesto")
-        return False
-    elif a % 100 != 0:  # Divisible entre 4 pero no entre 100
-        print(f"El año {a} es bisiesto")
-        return True
-    elif a % 400 != 0:  # Divisible entre 100 pero no entre 400
-        print(f"El año {a} no es bisiesto")
-        return False
-    else:  # Divisible entre 400
-        print(f"El año {a} es bisiesto")
-        return True
-bisiesto=es_bisiesto(a)
+    return (a % 4 == 0 and a % 100 != 0) or (a % 400 == 0)
 
+def calcular_total_meses(m, bisiesto):
+    # Elegimos el diccionario correcto según si el año es bisiesto o no
+    if bisiesto:
+        diccionario_meses = mes_bisiesto
+    else:
+        diccionario_meses = mes_no_bisiesto
 
-def mes(mes_bisiesto,mes_no_bisiesto,a):
-    suma=0
-    if bisiesto==True:
-        for clave,valor in mes_bisiesto.items():
-            if clave==m:
-                suma+=valor
-                return suma
+    # Inicializamos el total de días en 0
+    total_dias = 0
+
+    # Sumamos los días de los meses anteriores al mes dado
+    for i in range(1, m):  # Recorremos desde el mes 1 hasta el mes anterior a 'm'
+        total_dias += diccionario_meses.get(i, 0)  # Obtenemos los días del mes y los sumamos
+
+    return total_dias  # Devolvemos la suma total
     
-# Enero: 31 días
-# Febrero: 28 o 29 días (si es año bisiesto)
-# Marzo: 31 días
-# Abril: 30 días
-# Mayo: 31 días 
-# Junio: 30 días 
-# Julio: 31 días
-# Agosto: 31 días
-# Septiembre: 30 días
-# Octubre: 31 días
-# Noviembre: 30 días
-# Diciembre: 31 días
-
-    pass
-
-        
-        
-def calcular_juliano(a,m,d,bisiesto,total):
-
-# 365
-# 366
-    pass
+# Función para calcular el día juliano
+def calcular_juliano(d, total):
+    return total + d  # Suma el día del mes actual
 
 if __name__ == "__main__":
     menu()
-        
-        
