@@ -1,40 +1,93 @@
+d=0
+m=0
+a=0
+total=0
+bisiesto=False
+mes_bisiesto={
+        1:31,
+        2:28,
+        3:31,
+        4:30,
+        5:31,
+        6:30,
+        7:31,
+        8:31,
+        9:30,
+        10:31,
+        11:30,
+        12:31
+    }
+mes_no_bisiesto={
+        1:31,
+        2:29,
+        3:31,
+        4:30,
+        5:31,
+        6:30,
+        7:31,
+        8:31,
+        9:30,
+        10:31,
+        11:30,
+        12:31
+    }
+
 def menu():
     print("Detector de dia juliano \n introduzca la fecha \n")
     leer_fecha()
-    dia_del_mes()
+    mes()
     es_bisiesto()
     calcular_juliano()
     #total de dias
-    print(f"El dia juliano para la fecha {dia}-{mes}-{anho} es {total}")
+    print(f"El dia juliano para la fecha {d}-{m}-{a} es {total}")
 
-
-dia=0
-mes=0
-anho=0
-total=0
-
-def leer_fecha(dia,mes,anho):
-    try: 
-        d=int(input("introduzca el día: "))
-        m=int(input("introduzca el mes (numero): "))
-        a=int(input("introduzca el año: "))
-        if 1>=dia>=31:
-            print("debe ingresar un dia entre el 1 al 31: ")
+def leer_fecha(d,m,a):
+    while True:
+        try: 
             d=int(input("introduzca el día: "))
-        elif 1>=m>=12:
-            print("debe ingresar un dia entre el 1 al 12: ")
-            m=int(input("introduzca el día: "))
-        elif a>0:
-            print("debe ser un numero entero positivo: ")
+            m=int(input("introduzca el mes (numero): "))
             a=int(input("introduzca el año: "))
-    except ValueError:
-        menu()
-        raise ValueError("Debe cumplir con lo solicitado")  
-    return dia_del_mes(d,m,a)
+            if not (1<=d<=31):
+                print("debe ingresar un dia entre el 1 al 31: ")
+                d=int(input("introduzca el día: "))
+            elif not (1>=m>=12):
+                print("debe ingresar un mes entre el 1 al 12: ")
+                m=int(input("introduzca el mes: "))
+            elif a <= 0:
+                print("debe ser un numero entero positivo: ")
+                a=int(input("introduzca el año: "))
+            else:
+                return d,m,a
+            dia_del_mes(m)
+            es_bisiesto(a)
+
+        except ValueError:
+            raise ValueError("Debe cumplir con lo solicitado")
+
+def es_bisiesto(a):
+    if a % 4 != 0:  # No es divisible entre 4
+        print(f"El año {a} no es bisiesto")
+        return False
+    elif a % 100 != 0:  # Divisible entre 4 pero no entre 100
+        print(f"El año {a} es bisiesto")
+        return True
+    elif a % 400 != 0:  # Divisible entre 100 pero no entre 400
+        print(f"El año {a} no es bisiesto")
+        return False
+    else:  # Divisible entre 400
+        print(f"El año {a} es bisiesto")
+        return True
+bisiesto=es_bisiesto(a)
 
 
-
-def dia_del_mes():
+def mes(mes_bisiesto,mes_no_bisiesto,a):
+    suma=0
+    if bisiesto==True:
+        for clave,valor in mes_bisiesto.items():
+            if clave==m:
+                suma+=valor
+                return suma
+    
 # Enero: 31 días
 # Febrero: 28 o 29 días (si es año bisiesto)
 # Marzo: 31 días
@@ -50,24 +103,9 @@ def dia_del_mes():
 
     pass
 
-def es_bisiesto(anho,total):
-#Matemáticamente podemos saber si un año es bisiesto si este es múltiplo de 4. 
-# Si además es múltiplo de 100 no será bisiesto 
-# (ten en cuenta que 100 es múltiplo de 4 y 
-# por tanto cualquier número que sea múltiplo de 100 también es múltiplo de 4) 
-# a no ser que sea múltiplo de 400, que sí será bisiesto.
-    if anho%4 != 0: #No es divisible entre 4
-        print("No es bisiesto")
-    elif anho%4==0 and anho%100 != 0: #divisible entre 4 y no entre 100 o 400
-            print("Es bisiesto")
-            total+=1
-    elif anho % 4 == 0 and anho % 100 == 0 and anho % 400 != 0: #divisible entre 4 y 10 y no entre 400
-	    print("No es bisiesto")
-    elif anho % 4 == 0 and anho % 100 == 0 and anho % 400 == 0: #divisible entre 4, 100 y 400
-	    print("Es bisiesto")
         
-def calcular_juliano(anho,mes,anho,bisiesto,total):
-    if bisiesto
+        
+def calcular_juliano(a,m,d,bisiesto,total):
 
 # 365
 # 366

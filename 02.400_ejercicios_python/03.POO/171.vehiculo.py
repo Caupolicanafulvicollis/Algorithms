@@ -8,5 +8,3 @@ class Vehiculo:
     
     def apagar(self):
         print(f"El vehiculo {self.marca} {self.modelo} esta apagado")
-    
-        
