@@ -1,3 +1,6 @@
+"""
+Tomadas desde el ejercicio anterior ya que con las excepciones try y except se puede manejar los errores
+"""
 d=0
 m=0
 a=0
