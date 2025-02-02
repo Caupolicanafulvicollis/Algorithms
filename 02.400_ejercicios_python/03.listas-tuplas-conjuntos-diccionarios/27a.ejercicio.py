@@ -1,17 +1,20 @@
 def crear_lista():
     list1=[]
     while True:
-        num1=int(input("Ingresar un int para agregar a la lista: "))
-        while True: 
-            if isinstance(num1,int):
-                print(f"El dato {num1} ingresado es un int")
-                if num1 != 0:
-                    list1.append(num1)
-                else:  
-                    print("Ingresar datos en la lsita ha terminado")
-            else: 
-                print(f"El dato ingresado {num1} no es un int")
-                return True
+        try: 
+            num1 = int(input("Ingresar un int para agregar a la lista (0 para terminar): "))
+            if num1 == 0:  # Condición de salida 
+                print("Ingreso de datos finalizado.")
+                break
+            list1.append(num1)   # Agregar el número a la lista
+        except ValueError:
+            print("❌ Error: Ingresa solo números enteros.")
 
+    return list1  # Retorna la lista completa
+
+
+
+# Ejecutar la función y mostrar el resultado
 print("Ingresar datos en una lista")
-crear_lista()
+resultado = crear_lista()
+print("Lista final:", resultado)
