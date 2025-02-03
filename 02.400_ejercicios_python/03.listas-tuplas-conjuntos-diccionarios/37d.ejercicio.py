@@ -1,6 +1,6 @@
 list1=[]
 
-def crear_lista(): 
+def crear_lista(num1,lista): 
     while True:
         try: 
             num1 = float(input("Ingresar un int para agregar a la lista (0 para terminar): "))
@@ -11,7 +11,7 @@ def crear_lista():
         except ValueError:
             print("❌ Error: Ingresa solo números enteros.")
 
-    return list1  # Retorna la lista completa
+    return lista  # Retorna la lista completa
 
 
 def del_menor(a,list1)

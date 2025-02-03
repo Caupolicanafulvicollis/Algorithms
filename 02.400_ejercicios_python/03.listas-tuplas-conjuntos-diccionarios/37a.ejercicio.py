@@ -2,7 +2,7 @@ def crear_lista():
     list1=[]
     while True:
         try: 
-            num1 = float(input("Ingresar un int para agregar a la lista (0 para terminar): "))
+            num1 = float(input("Ingresar un numero para agregar a la lista (0 para terminar): "))
             if num1 == 0:  # Condición de salida 
                 print("Ingreso de datos finalizado.")
                 break
