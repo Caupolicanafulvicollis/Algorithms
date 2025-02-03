@@ -1,5 +1,6 @@
-def crear_lista():
-    list1=[]
+list1=[]
+
+def crear_lista(): 
     while True:
         try: 
             num1 = float(input("Ingresar un int para agregar a la lista (0 para terminar): "))
@@ -13,8 +14,4 @@ def crear_lista():
     return list1  # Retorna la lista completa
 
 
-
-# Ejecutar la función y mostrar el resultado
-print("Ingresar datos en una lista")
-resultado = crear_lista()
-print("Lista final:", resultado)
+def del_menor(a,list1)
