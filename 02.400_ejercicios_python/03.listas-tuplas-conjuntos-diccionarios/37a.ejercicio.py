@@ -8,7 +8,7 @@ def crear_lista():
                 break
             list1.append(num1)   # Agregar el número a la lista
         except ValueError:
-            print("❌ Error: Ingresa solo números enteros.")
+            print("❌ Error: Ingresa solo números.")
 
     return list1  # Retorna la lista completa
 
