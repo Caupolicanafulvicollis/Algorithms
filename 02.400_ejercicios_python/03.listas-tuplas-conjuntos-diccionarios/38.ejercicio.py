@@ -25,8 +25,8 @@ def menu():
             
         except Exception as e:
             print(f"Ocurrio un error: ¨{e}") #Manejo del error
-            print("Ingrese los datos dell pasajero de manera correcta.")
-            
+            print("Ingrese los datos del pasajero de manera correcta.")
+                        
 
 
 
