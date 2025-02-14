@@ -41,34 +41,30 @@ def menu():
                   2. Agregar ciudades a la lista de ciudades. \n 
                   3. Dado el DNI de un pasajero, ver a qué ciudad viaja. \n 
                   4. Dada una ciudad, mostrar la cantidad de pasajeros que viajan a esa ciudad.\n 
-                  5. Dado el DNI de un pasajero, ver a qué país viaja.\n 
-                  6. Dado un país, mostrar cuántos pasajeros viajan a ese país. \n 
-                  7. Salir del programa.""")
+                  5. Dado un país, mostrar cuántos pasajeros viajan a ese país. \n 
+                  6. Salir del programa.""")
             option=int(input("Ingrese su opción: ").strip())
             if not option: 
-                raise ValueError("La opción no puede estar vacio")
+                raise ValueError("La opción no puede estar vacia")
             if option >= 1 and option <= 7:
                 raise ValueError("La opción debe ser un número valido entre 1 al 7.")
-            
-            if not nombre or not apellido:
-                raise ValueError("El nombre y el apellido no pueden estar vacíos")
-            if not nombre.replace(" ", "").isalpha() or not apellido.replace(" ", "").isalpha() or not destino.isalpha():
-                raise ValueError("El nombre, apellido y destino solo pueden contener letras")
-
-
-            if not dni:
-                raise ValueError("El DNI no puede estar vacio")
-            if not destino: 
-                raise ValueError("El destino no puede estar vacio")
-            
+            if option   == 1: 
+                ingreso_datos()
+            elif option == 2: 
+                rutas()
+            elif option == 3:
+                destino()
+            elif option == 4:
+                flujo_destino_ciudad()
+            elif option == 5: 
+                flujo_destino_pais()
+            elif option == 6:
+                exit() 
             break  # Salir del bucle si todo está correcto
-
         except ValueError as e:
             print(f"Ocurrió un error: {e}")
-
             print("Ingrese los datos del pasajero de manera correcta.")
-    
-    return nombre, apellido, dni, destino
+
         
                         
 
