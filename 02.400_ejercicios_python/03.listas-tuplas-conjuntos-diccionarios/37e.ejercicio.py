@@ -40,3 +40,6 @@ assert contador_registrador([100, 200, 100, 300, 100, 200]) == [(100, 3), (200, 
 
 # 🔟 Lista con números decimales
 assert contador_registrador([1.1, 2.2, 1.1, 3.3, 3.3]) == [(1.1, 2), (2.2, 1), (1.1, 2), (3.3, 2), (3.3, 2)]
+
+print("¡Todos los tests pasaron exitosamente! 🚀")
+print("✅ Todas las pruebas pasaron correctamente.")
