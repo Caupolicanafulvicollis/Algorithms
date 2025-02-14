@@ -49,4 +49,6 @@ if __name__ == "__main__":
     lista_grande = list(range(1, 101))  # Lista de 1 a 100
     assert sumatoria1(lista_grande) == sum(lista_grande)
     assert sumatoria2(lista_grande) == sum(lista_grande)
+
+    print("¡Todos los tests pasaron exitosamente! 🚀")
     print("✅ Todas las pruebas pasaron correctamente.")
