@@ -1,8 +1,12 @@
 def buscar_pasajeros(lista_pasajeros,nombre):
     for pasajero in lista_pasajeros:
         if pasajero[0]==nombre:
-            return pasajero[1],pasajero[2]
-    return None, None
+            if not pasajero[2]:
+                print (f"El pasajero {nombre} no se encuentra en la base de datos")
+            else: 
+                print(f"El pasajero {nombre} se encuentra en la base de datos")
+                print(f"El pasajero {nombre} viajara a {pasajero[2]}")
+    
 
 pasajeros=[
     ("Manuel Juarez", 19823451,"Liverpool"), 
@@ -20,9 +24,5 @@ paises=[
     ]
 
 nombre_buscado="Rosa Ortiz"
-rut,destino=buscar_pasajeros(pasajeros,nombre_buscado)
+buscar_pasajeros(pasajeros,nombre_buscado)
 
-if rut and destino:
-    print(f"El RUT de {nombre_buscado} es {rut} y su desitno es {destino}.")
-else:
-    print(f"No se encontro al pasajero {nombre_buscado}")
