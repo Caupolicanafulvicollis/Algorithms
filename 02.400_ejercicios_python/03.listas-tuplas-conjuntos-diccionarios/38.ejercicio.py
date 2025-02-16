@@ -1,10 +1,12 @@
-tupla = ()
-personas=[]
+destinos=[]
+db=[]
 
+#Agregar ciudades a la lista de ciudades.
 def rutas(pais, ciudad):
     destinos=list(map(lambda p, c: (p,c), pais, ciudad))
     return destinos
 
+#Agregar pasajeros a la lista de viajeros.
 def ingreso_datos(nombre, apellido,dni,destino):
     while True: #Hasta que resulte las entradas    
         try:
@@ -27,8 +29,31 @@ def ingreso_datos(nombre, apellido,dni,destino):
         except ValueError as e:
             print(f"Ocurrió un error: {e}")
             print("Ingrese los datos del pasajero de manera correcta.")
+    
+    return base_datos(nombre,apellido,dni,destino)
 
-    return nombre, apellido, dni, destino
+def base_datos(nombre,apellido,dni,destino):
+    bd=list(map(lambda n,a,rut,d: (f"{n} {a}",rut, d), nombre, apellido,dni,destino))
+    return bd
+
+#Dado el DNI de un pasajero, ver a qué ciudad viaja.
+def destino(db):
+    while True:
+        try: 
+            looking_for=int(input("Ingrese el dni del pasajero:" ))
+            if not looking_for:
+                raise ValueError("El DNI no puede estar vacio")
+            if looking_for <=0 or len(int(looking_for)) < 7 or len(int(looking_for))>9:
+                raise ValueError("El DNI debe ser un número válido con 7 a 9 dígitos")
+            break
+        except ValueError as e:
+            print(f"Ocurrió un error: {e}")
+            print("Ingrese los datos del pasajero de manera correcta.")   
+    for i in db:
+        if  looking_for==
+
+
+
 
 
 def menu():
@@ -73,7 +98,7 @@ def menu():
             print("Por favor, ingrese un número válido entre 1 y 6.")
 
 
-
+     
         
                         
 
