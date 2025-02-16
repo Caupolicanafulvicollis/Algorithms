@@ -19,8 +19,8 @@ def ingreso_datos(nombre, apellido,dni,destino):
                 raise ValueError("El nombre y el apellido no pueden estar vacíos")
             if not nombre.replace(" ", "").isalpha() or not apellido.replace(" ", "").isalpha() or not destino.isalpha():
                 raise ValueError("El nombre, apellido y destino solo pueden contener letras")
-            if dni <= 0 or len(str(dni)) < 7 or len(str(dni)) > 9:
-                raise ValueError("El DNI debe ser un número válido con 7 a 9 dígitos")
+            if dni <= 0 or len(str(dni)) < 7 or len(str(dni)) > 8:
+                raise ValueError("El DNI debe ser un número válido con 7 a 8 dígitos")
             if not dni:
                 raise ValueError("El DNI no puede estar vacio")
             if not destino: 
@@ -37,24 +37,14 @@ def base_datos(nombre,apellido,dni,destino):
     return bd
 
 #Dado el DNI de un pasajero, ver a qué ciudad viaja.
-def destino(db):
-    while True:
-        try: 
-            looking_for=int(input("Ingrese el dni del pasajero:" ))
-            if not looking_for:
-                raise ValueError("El DNI no puede estar vacio")
-            if looking_for <=0 or len(int(looking_for)) < 7 or len(int(looking_for))>9:
-                raise ValueError("El DNI debe ser un número válido con 7 a 9 dígitos")
-            break
-        except ValueError as e:
-            print(f"Ocurrió un error: {e}")
-            print("Ingrese los datos del pasajero de manera correcta.")   
-    for i in db:
-        if  looking_for==dni:
-        
-        else: 
-            print("El pasajero no fue encontrado|")
-        
+def destino(lista_pasajeros, dni):
+    for pasajero in lista_pasajeros:
+        if pasajero[1] == dni:
+            return pasajero[2]
+    if not dni:
+        print (f"El pasajero {dni} no se encuentra en la base de datos")
+    else: 
+        print(f"El pasajero {dni} se encuentra en la base de datos")
 
 
 
@@ -86,7 +76,18 @@ def menu():
             elif option == 2: 
                 rutas()
             elif option == 3:
-                destino()
+                while True:    
+                    try:
+                        pasajero=int(input("Ingrese el DNI del pasajero:" ))
+                        if not pasajero:
+                            raise ValueError("El DNI no puede estar vacio")
+                        if pasajero <=0 or len(int(pasajero)) < 7 or len(int(pasajero))>8:
+                            raise ValueError("El DNI debe ser un número válido con 7 a 8 dígitos") 
+                        break
+                    except ValueError as e:
+                        print(f"Ocurrió un error: {e}")
+                        print("Ingrese los datos del pasajero de manera correcta.")
+                    destino(db, pasajero)
             elif option == 4:
                 flujo_destino_ciudad()
             elif option == 5: 
