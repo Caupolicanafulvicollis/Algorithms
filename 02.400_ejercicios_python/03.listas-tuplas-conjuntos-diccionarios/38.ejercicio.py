@@ -1,5 +1,17 @@
-destinos=[]
-db=[]
+db=[
+    ("Manuel Juarez", 19823451,"LPL"), 
+    ("Silvana Paredes", 22709128, "EZE"), 
+    ("Rosa Ortiz", 15123978,"GLA"), 
+    ("Luciana Hernandez", 38981374, "LIS")
+    ] 
+
+destinos=[
+    ("EZE","Argentina"), 
+    ("GLA","Escocia"), 
+    ("LIS", "Portugal"), 
+    ("LPL","Inglaterra"),
+    ("MAD","España")
+    ]
 
 #Agregar ciudades a la lista de ciudades.
 def rutas(pais, ciudad):
@@ -20,6 +32,15 @@ def destino(lista_pasajeros, dni):
             else: 
                 print(f"El pasajero {dni} se encuentra en la base de datos")
                 print(f"El pasajero {dni} viajara a {pasajero[2]}")
+
+#4. Dada una ciudad, mostrar la cantidad de pasajeros que viajan a esa ciudad.
+def flujo_destino_ciudad(lista_pasajeros, destino):
+    contador=0
+    for pasajero in lista_pasajeros:
+        if pasajero[2] == destino:
+            contador+=1
+    print(f"La cantidad de pasajeros que viajan a esa ciudad es de {contador}")
+              
 
 def menu():
     while True:  # Hasta que se ingrese una opción válida
@@ -55,12 +76,14 @@ def menu():
                             raise ValueError("El nombre y el apellido no pueden estar vacíos")
                         if not nombre.replace(" ", "").isalpha() or not apellido.replace(" ", "").isalpha() or not destino.isalpha():
                             raise ValueError("El nombre, apellido y destino solo pueden contener letras")
+                        if not destino: 
+                            raise ValueError("El destino no puede estar vacio")
+                        if len(str(destino)) == 3:
+                            raise ValueError("El codigo IATA de la ciudad debe contener 3 letras.")
                         if dni <= 0 or len(str(dni)) < 7 or len(str(dni)) > 8:
                             raise ValueError("El DNI debe ser un número válido con 7 a 8 dígitos")
                         if not dni:
                             raise ValueError("El DNI no puede estar vacio")
-                        if not destino: 
-                            raise ValueError("El destino no puede estar vacio")
                         break  # Salir del bucle si todo está correcto
                     except ValueError as e:
                         print(f"Ocurrió un error: {e}")
@@ -74,6 +97,8 @@ def menu():
                         ciudad=input("Ingrese la ciudad en codigo IATA: ").upper().strip()
                         if not ciudad.isalpha() or not pais.isalpha():
                             raise ValueError("El pais y la ciudad deben contener letras")
+                        if len(str(ciudad)) == 3:
+                            raise ValueError("El codigo IATA de la ciudad debe contener 3 letras.")
                         break
                     except ValueError as e:
                         print(f"Ocurrió un error: {e}")
@@ -95,9 +120,23 @@ def menu():
                     destino(db, pasajero)
             #4. Dada una ciudad, mostrar la cantidad de pasajeros que viajan a esa ciudad.
             elif option == 4:
-                flujo_destino_ciudad()
+                while True:
+                    try: 
+                        ciudad=int(input("Ingrese la ciudad: "))
+                        if not ciudad: 
+                            raise ValueError("La ciudad no puede estar vacía")
+                        if not ciudad.isalpha():
+                            raise ValueError("La ciudad deben contener letras")
+                        if len(str(ciudad)) == 3:
+                            raise ValueError("La ciudad en código IATA debe contener 3 letras")
+                        break
+                    except ValueError as e:
+                        print(f"Ocurrió un error: {e}")
+                        print("Ingrese los datos del pasajero de manera correcta.")
+                flujo_destino_ciudad(db,ciudad)
+            #5. Dado un país, mostrar cuántos pasajeros viajan a ese país.
             elif option == 5: 
-                flujo_destino_pais()
+                flujo_destino_pais(db,pais)
             elif option == 6:
                 print("Saliendo del programa...")
                 exit() 
