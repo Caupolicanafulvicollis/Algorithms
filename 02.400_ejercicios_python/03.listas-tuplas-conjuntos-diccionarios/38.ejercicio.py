@@ -50,7 +50,11 @@ def destino(db):
             print(f"Ocurrió un error: {e}")
             print("Ingrese los datos del pasajero de manera correcta.")   
     for i in db:
-        if  looking_for==
+        if  looking_for==dni:
+        
+        else: 
+            print("El pasajero no fue encontrado|")
+        
 
 
 
