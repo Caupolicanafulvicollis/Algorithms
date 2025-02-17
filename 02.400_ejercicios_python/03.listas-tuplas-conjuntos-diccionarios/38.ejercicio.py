@@ -20,7 +20,6 @@ db = [
     ("Mariana Silva", 33881122, "BKK"),
     ("Hugo Fuentes", 35556677, "SYD"),
     ("Natalia Espinoza", 39005544, "DXB"),
-    # Pasajeros que comparten el mismo destino (Madrid - MAD)
     ("Andrea Núñez", 47778899, "MAD"),
     ("Gabriela Suárez", 49990011, "ATL"),
     ("Pablo Contreras", 50001122, "MIA"),
@@ -71,14 +70,32 @@ contador_ciudad=0
 contador_pais=0
 
 #Agregar ciudades a la lista de ciudades.
-def rutas(pais, ciudad):
-    destinos=list(map(lambda p, c: (p,c), pais, ciudad))
+def rutas(destinos, codigos_iata, paises):
+    """
+    Agrega nuevas ciudades a la lista de destinos en formato (IATA, País).
+    
+    :param destinos: Lista existente de destinos en formato (IATA, País).
+    :param codigos_iata: Lista de códigos IATA de los nuevos destinos.
+    :param paises: Lista de países correspondientes a cada código IATA.
+    :return: Lista de destinos actualizada.
+    """
+    nuevos_destinos = list(map(lambda iata, pais: (iata, pais), codigos_iata, paises))
+    
+    # Agregar los nuevos destinos a la lista existente sin duplicados
+    for destino in nuevos_destinos:
+        if destino not in destinos:
+            destinos.append(destino)
     return destinos
 
 #Agregar pasajeros a la lista de viajeros.
-def base_datos(nombre,apellido,dni,destino):
-    bd=list(map(lambda n,a,rut,d: (f"{n} {a}",rut, d), nombre, apellido,dni,destino))
-    return bd
+def base_datos(db,nombre,apellido,dni,destino):
+    nuevos_pasajeros=list(map(lambda n,a,rut,d: (f"{n} {a}",rut, d), nombre, apellido,dni,destino))
+    
+    # Agregar los nuevos pasajeros a la lista existente sin duplicados
+    for pasajero in nuevos_pasajeros:
+        if pasajero not in db:
+            db.append(pasajero)
+    return db
 
 #Dado el DNI de un pasajero, ver a qué ciudad viaja.
 def busqueda_dni(lista_pasajeros, dni):
@@ -107,7 +124,7 @@ def flujo_destino_pais(lista_pasajeros,destino,destinos):
 
         if pasajero[2]==destino:
             contador+=1
-        
+               
 
 
 
@@ -159,7 +176,7 @@ def menu():
                     except ValueError as e:
                         print(f"Ocurrió un error: {e}")
                         print("Ingrese los datos del pasajero de manera correcta.")
-                    base_datos(nombre,apellido,dni,destino)
+                    base_datos(db,nombre,apellido,dni,destino)
             #2. Agregar ciudades a la lista de ciudades.
             elif option == 2:
                 while True: 
@@ -174,7 +191,7 @@ def menu():
                     except ValueError as e:
                         print(f"Ocurrió un error: {e}")
                         print("Ingrese los datos del pasajero de manera correcta.")
-                    rutas(pais,ciudad)
+                    rutas(destinos,pais,ciudad)
             # 3. Dado el DNI de un pasajero, ver a qué ciudad viaja.
             elif option == 3:
                 while True:    
