@@ -90,6 +90,7 @@ def base_datos(db,nombres,apellidos,dnis,destinos):
         nuevo_pasajero = (f"{nombres[i]} {apellidos[i]}", dnis[i], destinos[i])
         if nuevo_pasajero not in db:
             db.append(nuevo_pasajero)
+        print("Pasajero agregado correctamento a la base de datos")
     return db
 
 #Dado el DNI de un pasajero, ver a qué ciudad viaja.
@@ -161,7 +162,7 @@ def menu():
                             raise ValueError("El nombre, apellido y destino solo pueden contener letras")
                         if not destino: 
                             raise ValueError("El destino no puede estar vacio")
-                        if len(str(destino)) == 3:
+                        if len(str(destino)) != 3:
                             raise ValueError("El codigo IATA de la ciudad debe contener 3 letras.")
                         if dni <= 0 or len(str(dni)) < 7 or len(str(dni)) > 8:
                             raise ValueError("El DNI debe ser un número válido con 7 a 8 dígitos")
@@ -171,7 +172,8 @@ def menu():
                     except ValueError as e:
                         print(f"Ocurrió un error: {e}")
                         print("Ingrese los datos del pasajero de manera correcta.")
-                    base_datos(db,nombre,apellido,dni,destino)
+                    # Llamar a `base_datos()` con listas en lugar de valores individuales
+                    base_datos(db,[nombre],[apellido],[dni],[destino])
             #2. Agregar ciudades a la lista de ciudades.
             elif option == 2:
                 while True: 
@@ -215,7 +217,7 @@ def menu():
                         break
                     except ValueError as e:
                         print(f"Ocurrió un error: {e}")
-                        print("Ingrese los datos del pasajero de manera correcta.")
+                        print("Ingrese los datos de la ciudad de manera correcta.")
                 flujo_destino_ciudad(db,ciudad)
                 print(f"La cantidad de pasajeros que viajan a esa ciudad es de {contador_ciudad}")
             #5. Dado un país, mostrar cuántos pasajeros viajan a ese país.
@@ -232,7 +234,7 @@ def menu():
                         print(f"Ocurrió un error: {e}")
                         print("Ingrese el país de manera correcta.")
                 flujo_destino_pais(db,pais,destinos)
-                print(f"La cantidad de pasajeros que viajan a esa país es de {contador_país}")
+                print(f"La cantidad de pasajeros que viajan a esa país es de {contador_pais}")
             elif option == 6:
                 print("Saliendo del programa...")
                 exit() 
