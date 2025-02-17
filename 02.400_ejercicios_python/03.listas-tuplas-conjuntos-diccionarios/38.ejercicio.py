@@ -69,67 +69,62 @@ destinos = [
 contador_ciudad=0
 contador_pais=0
 
-#Agregar ciudades a la lista de ciudades.
+#Agregar ciudades a la lista destinos.
 def rutas(destinos, codigos_iata, paises):
-    """
-    Agrega nuevas ciudades a la lista de destinos en formato (IATA, País).
-    
-    :param destinos: Lista existente de destinos en formato (IATA, País).
-    :param codigos_iata: Lista de códigos IATA de los nuevos destinos.
-    :param paises: Lista de países correspondientes a cada código IATA.
-    :return: Lista de destinos actualizada.
-    """
-    nuevos_destinos = list(map(lambda iata, pais: (iata, pais), codigos_iata, paises))
+    nuevos_destinos = []
     
     # Agregar los nuevos destinos a la lista existente sin duplicados
+    for i in range(len(codigos_iata)):
+        nuevos_destinos.append((codigos_iata[i], paises[i]))
+
     for destino in nuevos_destinos:
         if destino not in destinos:
             destinos.append(destino)
+
     return destinos
 
 #Agregar pasajeros a la lista de viajeros.
-def base_datos(db,nombre,apellido,dni,destino):
-    nuevos_pasajeros=list(map(lambda n,a,rut,d: (f"{n} {a}",rut, d), nombre, apellido,dni,destino))
-    
+def base_datos(db,nombres,apellidos,dnis,destinos):    
     # Agregar los nuevos pasajeros a la lista existente sin duplicados
-    for pasajero in nuevos_pasajeros:
-        if pasajero not in db:
-            db.append(pasajero)
+    for i in range(len(nombres)):
+        nuevo_pasajero = (f"{nombres[i]} {apellidos[i]}", dnis[i], destinos[i])
+        if nuevo_pasajero not in db:
+            db.append(nuevo_pasajero)
     return db
 
 #Dado el DNI de un pasajero, ver a qué ciudad viaja.
 def busqueda_dni(lista_pasajeros, dni):
     for pasajero in lista_pasajeros:
         if pasajero[1] == dni:
-            if not pasajero[2]:
-                print (f"El pasajero {dni} no se encuentra en la base de datos")
-            else: 
-                print(f"El pasajero {dni} se encuentra en la base de datos")
-                print(f"El pasajero {dni} viajara a {pasajero[2]}")
+            print(f"El pasajero {dni} se encuentra en la base de datos")
+            print(f"El pasajero {dni} viajara a {pasajero[2]}")
+            return pasajero[2]
+    print(f"El pasajero con DNI {dni} no está en la base de datos")
+    return None
 
 #4. Dada una ciudad, mostrar la cantidad de pasajeros que viajan a esa ciudad.
 def flujo_destino_ciudad(lista_pasajeros, destino):
-    contador_ciudad=0
+    contador_ciudad = 0
     for pasajero in lista_pasajeros:
         if pasajero[2] == destino:
-            contador_ciudad+=1
+            contador_ciudad += 1
     return contador_ciudad
 
 #5. Dado un país, mostrar cuántos pasajeros viajan a ese país.
-def flujo_destino_pais(lista_pasajeros,destino,destinos): 
-    contador_pais=0
+def flujo_destino_pais(lista_pasajeros, pais, destinos): 
+    contador_pais = 0
+    codigos_iata = []
+    # Obtener los códigos IATA de las ciudades dentro del país
+    for codigo, pais_destino in destinos:
+        if pais_destino == pais:
+            codigos_iata.append(codigo)
+    # Contar pasajeros cuyo destino está en el país seleccionado
     for pasajero in lista_pasajeros:
-        
-        for pais in destinos: 
+        if pasajero[2] in codigos_iata:
+            contador_pais += 1
+    return contador_pais
 
-        if pasajero[2]==destino:
-            contador+=1
                
-
-
-
-
-
 def menu():
     while True:  # Hasta que se ingrese una opción válida
         try:
@@ -236,7 +231,7 @@ def menu():
                     except ValueError as e: 
                         print(f"Ocurrió un error: {e}")
                         print("Ingrese el país de manera correcta.")
-                flujo_destino_pais(db,pais)
+                flujo_destino_pais(db,pais,destinos)
                 print(f"La cantidad de pasajeros que viajan a esa país es de {contador_país}")
             elif option == 6:
                 print("Saliendo del programa...")
@@ -246,12 +241,7 @@ def menu():
         
         except ValueError as e:
             print(f"Ocurrió un error: {e}")
-            print("Por favor, ingrese un número válido entre 1 y 6.")
-
-  
-                        
-
-
+            print("Por favor, ingrese un número válido entre 1 y 6.")                 
 
 if __name__ == "__main__":
     menu()
