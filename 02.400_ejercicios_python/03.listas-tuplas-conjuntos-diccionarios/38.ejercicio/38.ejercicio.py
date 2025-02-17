@@ -1,3 +1,5 @@
+import unittest
+from unittest.mock import patch
 # Base de datos de pasajeros con nombre, RUT (DNI) y código IATA del destino
 db = [
     ("Manuel Juarez", 19823451, "LPL"), 
@@ -246,4 +248,21 @@ def menu():
             print("Por favor, ingrese un número válido entre 1 y 6.")                 
 
 if __name__ == "__main__":
-    menu()
+    with patch("builtins.input", side_effect=["3", "19823451", "6"]):  # Buscar un pasajero y salir
+        assert menu() is None
+
+    with patch("builtins.input", side_effect=["4", "MAD", "6"]):  # Buscar pasajeros a MAD y salir
+        assert menu() is None
+
+    with patch("builtins.input", side_effect=["5", "España", "6"]):  # Buscar pasajeros a España y salir
+        assert menu() is None
+
+    with patch("builtins.input", side_effect=["1", "Guillermo", "Vidal", "15459799", "SCL", "6"]):  # Agregar pasajero y salir
+        assert menu() is None
+
+    with patch("builtins.input", side_effect=["2", "Chile", "SCL", "6"]):  # Agregar una ciudad y salir
+        assert menu() is None
+
+    with patch("builtins.input", side_effect=["7", "6"]):  # Intentar opción inválida, luego salir
+        assert menu() is None
+    print("Todas las pruebas han pasado correctamente ✅")
