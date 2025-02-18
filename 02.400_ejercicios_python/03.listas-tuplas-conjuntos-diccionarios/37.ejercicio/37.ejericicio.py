@@ -69,3 +69,9 @@ if __name__ == "__main__":
     # Probar filtrado de elementos menores que un número dado
     with patch("builtins.input", side_effect=["15"]):
         assert filtrar_menores([5, 10, 15, 20]) == [5, 10], "Error en filtrar_menores()"
+
+    # Probar generación de tuplas con frecuencias
+    assert generar_tuplas([5, 10, 5, 10, 10]) == [(5, 2), (10, 3)], "Error en generar_tuplas()"
+
+    print("✅ Todas las pruebas pasaron correctamente.")
+    main()  # Iniciar el programa normalmente
