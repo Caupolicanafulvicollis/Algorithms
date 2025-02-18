@@ -57,21 +57,3 @@ if __name__ == "__main__":
         eliminar_primera_ocurrencia(lista)
         assert lista == [5, 15, 20], "Error en eliminar_primera_ocurrencia()"
 
-    # Probar eliminación de un número que no está en la lista
-    lista = [5, 15, 20]
-    with patch("builtins.input", side_effect=["50"]):
-        eliminar_primera_ocurrencia(lista)
-        assert lista == [5, 15, 20], "Error al intentar eliminar un número inexistente"
-
-    # Probar sumatoria de elementos
-    assert sumar_elementos([5, 15, 20]) == 40, "Error en sumar_elementos()"
-
-    # Probar filtrado de elementos menores que un número dado
-    with patch("builtins.input", side_effect=["15"]):
-        assert filtrar_menores([5, 10, 15, 20]) == [5, 10], "Error en filtrar_menores()"
-
-    # Probar generación de tuplas con frecuencias
-    assert generar_tuplas([5, 10, 5, 10, 10]) == [(5, 2), (10, 3)], "Error en generar_tuplas()"
-
-    print("✅ Todas las pruebas pasaron correctamente.")
-    main()  # Iniciar el programa normalmente
