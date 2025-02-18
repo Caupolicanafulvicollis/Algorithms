@@ -57,3 +57,9 @@ if __name__ == "__main__":
         eliminar_primera_ocurrencia(lista)
         assert lista == [5, 15, 20], "Error en eliminar_primera_ocurrencia()"
 
+    # Probar eliminación de un número que no está en la lista
+    lista = [5, 15, 20]
+    with patch("builtins.input", side_effect=["50"]):
+        eliminar_primera_ocurrencia(lista)
+        assert lista == [5, 15, 20], "Error al intentar eliminar un número inexistente"
+
