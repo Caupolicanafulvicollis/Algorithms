@@ -63,3 +63,6 @@ if __name__ == "__main__":
         eliminar_primera_ocurrencia(lista)
         assert lista == [5, 15, 20], "Error al intentar eliminar un número inexistente"
 
+    # Probar sumatoria de elementos
+    assert sumar_elementos([5, 15, 20]) == 40, "Error en sumar_elementos()"
+
