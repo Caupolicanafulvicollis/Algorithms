@@ -66,3 +66,6 @@ if __name__ == "__main__":
     # Probar sumatoria de elementos
     assert sumar_elementos([5, 15, 20]) == 40, "Error en sumar_elementos()"
 
+    # Probar filtrado de elementos menores que un número dado
+    with patch("builtins.input", side_effect=["15"]):
+        assert filtrar_menores([5, 10, 15, 20]) == [5, 10], "Error en filtrar_menores()"
