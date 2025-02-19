@@ -56,18 +56,16 @@ Este directorio ofrece una colección integral de 400 ejercicios resueltos en Py
       - Hacer un programa que muestre el siguiente dibujo...
    - [Ejercicio 13](01.variables-operadores-expresiones-condicionales-bucles/13.ejercicio.py) 
       - Idem anterior con este dibujo...
-   - [Ejercicio 14](01.variables-operadores-expresiones-condicionales-bucles/14.ejercicio.py) 
-      - Crea un función EscribirCentrado, que reciba como parámetro un texto y lo escriba centrado en pantalla (suponiendo una anchura de 80 columnas; pista: deberás escribir 40 - longitud/2 espacios antes del texto). Además subraya el mensaje utilizando el carácter =.
 
 ### Lista, tuplas, conjuntos, diccionarios
    **Ejercicios**
    
 
 3. **Funciones**  
-   [Ejercicios destacados:](#)
-   - Crear funciones como `EsMultiplo`, `calcularMaxMin` y `Login`.
-   - Implementar algoritmos como el MCD usando el método de Euclides.
-   - Funciones recursivas para factoriales y números de Fibonacci.
+   - [Ejercicio 14](02.funciones/14.ejercicio.py) 
+      - Crea un función EscribirCentrado, que reciba como parámetro un texto y lo escriba centrado en pantalla (suponiendo una anchura de 80 columnas; pista: deberás escribir 40 - longitud/2 espacios antes del texto). Además subraya el mensaje utilizando el carácter =.
+   - [Ejercicio 15](02.funciones/15.ejercicio.py)
+      - Crea un programa que pida dos número enteros al usuario y diga si alguno de ellos es múltiplo del otro. Crea una función EsMultiplo que reciba los dos números, y devuelve si el primero es múltiplo del segundo.
 
 4. **Estructuras de Datos (Listas, Tuplas, Conjuntos, Diccionarios)**  
    [Ejercicios destacados:](#)
