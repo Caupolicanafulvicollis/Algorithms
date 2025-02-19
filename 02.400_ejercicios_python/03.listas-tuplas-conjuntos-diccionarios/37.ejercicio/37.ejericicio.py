@@ -61,22 +61,16 @@ def menu():
             print(f"Ocurrió un error: {e}")
             print("Ingrese los datos del pasajero de manera correcta.")  
         if option == 1:
-            while True:
                 ()
         if option == 2:
-            while True:
                 ()
         if option == 3:
-            while True:
                 ()
         if option == 4:
-            while True:
                 ()
         if option == 5:
-            while True:
                 ()
         if option == 6:
-            while True:
                 ()
 
 
