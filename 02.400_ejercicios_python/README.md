@@ -236,6 +236,7 @@ Este directorio ofrece una colección integral de 400 ejercicios resueltos en Py
          
             ```python
             [("Buenos Aires","Argentina"), ("Glasgow","Escocia"), ("Lisboa", "Portugal"), ("Liverpool","Inglaterra"),("Madrid","España")]
+            
             ```
 
          - Hacer un menú iterativo que permita al usuario realizar las siguientes operaciones:
