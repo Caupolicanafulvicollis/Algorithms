@@ -9,7 +9,7 @@ Este directorio ofrece una colección integral de 400 ejercicios resueltos en Py
 ### Indice
  1. [Variables, Operadores, Condicionales y Bucles](#variables-operadores-condicionales-y-bucles)
  2. [Funciones](#funciones)
- 2. [Lista, tuplas, conjuntos, diccionarios](#Listas,-tuplas,-conjuntos,-diccionarios)
+ 2. [Lista, tuplas, conjuntos y diccionarios](#Listas-tuplas-conjuntos-y-diccionarios)
  3. [Mas diccionarios, listas, tuplas, conjuntos](#mas-diccionarios-listas-tuplas-conjuntos)
  4. [Validación de datos de entrada](#validación-de-datos-de-entrada)
  5. [Funciones de Orden Superior](#funciones-de-orden-superior)
@@ -210,7 +210,7 @@ Este directorio ofrece una colección integral de 400 ejercicios resueltos en Py
 
    [Indice](#indice)
 
-### [Listas, tuplas, conjuntos, diccionarios](03.listas-tuplas-conjuntos-diccionarios)
+### [Listas tuplas conjuntos y diccionarios](03.listas-tuplas-conjuntos-diccionarios)
 
    - [Ejercicio 37](02.funciones/37.ejercicio.py)
          - A) Solicitar al usuario que ingrese números, los cuales se guardarán en una lista. Finalizar al ingresar el número 0, el cual no debe guardarse.

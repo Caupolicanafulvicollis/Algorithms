@@ -38,6 +38,28 @@ def generar_tuplas(lista):
     print("Lista de tuplas (número, frecuencia):", lista_tuplas)
     return lista_tuplas  # Se devuelve para poder hacer pruebas
 
+def menu():
+    while True: #hasta que se ingrese una opcion valida
+        try: 
+            # Menú de opciones
+            print("---MODIFICACION DE LISTAS")
+            print("Seleccione una opción:\n"
+                "1. Ingresar números en una lista (finalizar con 0).\n"
+                "2. Ingresar un número y eliminar su primera ocurrencia en la lista.\n"
+                "3. Mostrar la sumatoria de todos los elementos de la lista.\n"
+                "4. Ingresar un número y mostrar los elementos menores que él.\n"
+                "5. Generar una lista de tuplas con números y su frecuencia en la lista.\n"
+                "6. Salir.")
+            #Entrada del usuario
+            option = int(input("Ingrese su opción: ").strip())
+            #Validacion de la opcion ingresada
+            if option < 1 or option >6: 
+                raise ValueError("La opción debe ser un número válido entre 1 y 6.")
+            
+        except ValueError as e: 
+
+
+
 def main():
     lista = solicitar_numeros()
     eliminar_primera_ocurrencia(lista)
