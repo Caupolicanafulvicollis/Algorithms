@@ -226,18 +226,16 @@ Este directorio ofrece una colección integral de 400 ejercicios resueltos en Py
    - [Ejercicio 38](02.funciones/38.ejercicio.py)
          - Escribir un programa que permita procesar datos de pasajeros de viaje en una lista de tuplas con la siguiente forma: (nombre, dni, destino). Ejemplo:
             
-            ```
+```py
             #ejemplo
-             [("Manuel Juarez", 19823451, "Liverpool"), ("Silvana Paredes", 22709128, "Buenos Aires"), ("Rosa Ortiz", 15123978, "Glasgow"), ("Luciana Hernandez", 38981374, "Lisboa")] 
-            
-            ```
+             [("Manuel Juarez", 19823451, "Liverpool"), ("Silvana Paredes", 22709128, "Buenos Aires"), ("Rosa Ortiz", 15123978, "Glasgow"), ("Luciana Hernandez", 38981374, "Lisboa")]          
+```
           
          - Además, en otra lista de tuplas se almacenan los datos de cada ciudad y el país al que pertenecen. Ejemplo: 
          
-            ```
+```py
             [("Buenos Aires","Argentina"), ("Glasgow","Escocia"), ("Lisboa", "Portugal"), ("Liverpool","Inglaterra"),("Madrid","España")]
-            
-            ```
+```
 
          - Hacer un menú iterativo que permita al usuario realizar las siguientes operaciones:
             
