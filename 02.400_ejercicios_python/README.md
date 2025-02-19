@@ -6,7 +6,7 @@ Este directorio ofrece una colección integral de 400 ejercicios resueltos en Py
 
 ## ✨ Contenido del Directorio
 
-### 📜 Índice
+### Indice
  1. [Variables, Operadores, Condicionales y Bucles](#variables-operadores-condicionales-y-bucles)
  2. [Funciones](#funciones)
  2. [Lista, tuplas, conjuntos, diccionarios](#lista-tuplas-conjuntos-diccionarios)
@@ -96,6 +96,8 @@ Este directorio ofrece una colección integral de 400 ejercicios resueltos en Py
        * *
        *
        ```
+   
+   [Indice](#indice)
 
 ### [Funciones](02.funciones)
    **Ejercicios**  
@@ -206,8 +208,61 @@ Este directorio ofrece una colección integral de 400 ejercicios resueltos en Py
        *******
        ```
 
+   [Indice](#indice)
 
+### [Listas , tuplas , conjuntos , diccionarios](03.listas-tuplas-conjuntos-diccionarios)
 
+   - [Ejercicio 37](02.funciones/37.ejercicio.py)
+         - A) Solicitar al usuario que ingrese números, los cuales se guardarán en una lista. Finalizar al ingresar el número 0, el cual no debe guardarse.
+         - B) Solicitar al usuario que ingrese un número y, si está en la lista, eliminar su primera ocurrencia. Mostrar un mensaje si no es posible eliminar.
+         - C) Recorrer la lista para imprimir la sumatoria de todos los elementos.
+         - D) Solicitar otro número y crear una lista con los elementos menores que el número dado. Imprimir la nueva lista.
+         - E) Generar e imprimir una nueva lista con tuplas (número, cantidad de veces que aparece en la lista original).
+
+   - [Ejercicio 38](02.funciones/38.ejercicio.py)
+         - Escribir un programa que procese datos de pasajeros de viaje en una lista de tuplas: (nombre, dni, destino).
+         - Crear otra lista con ciudades y los países a los que pertenecen.
+         - Incluir un menú iterativo con las siguientes opciones:
+            - Agregar pasajeros.
+            - Agregar ciudades.
+            - Consultar a qué ciudad viaja un pasajero dado su DNI.
+            - Contar la cantidad de pasajeros que viajan a una ciudad dada.
+            - Consultar a qué país viaja un pasajero dado su DNI.
+            - Contar cuántos pasajeros viajan a un país dado.
+            - Salir del programa.
+
+   - [Ejercicio 39](02.funciones/39.ejercicio.py)
+      - Solicitar al usuario los nombres de pila de los alumnos de nivel primario, finalizando con "x".
+      - Solicitar los nombres de los alumnos de nivel secundario, finalizando con "x".
+      - Informar:
+         - Todos los nombres de alumnos sin repeticiones.
+         - Nombres repetidos entre los alumnos de primaria y secundaria.
+         - Nombres exclusivos de los alumnos de nivel primario.
+
+   - [Ejercicio 40](02.funciones/40.ejercicio.py)
+      - Suponer una lista con datos de compras hechas por clientes en un mes: (cliente, día del mes, monto, domicilio del cliente).
+      - Escribir una función que retorne los domicilios de los clientes a los que se debe enviar una factura, asegurando que cada domicilio solo aparezca una vez.
+
+   - [Ejercicio 41](02.funciones/41.ejercicio.py)
+     - Escribir un programa que procese strings ingresados por el usuario, finalizando cuando se hayan procesado 50 strings.
+     - Al finalizar, informar la cantidad total de ocurrencias de cada carácter.
+     - ¿Cómo se podrían informar solo las ocurrencias de las letras del alfabeto, incluyendo el valor 0 para las letras que no aparecieron?
+
+   - [Ejercicio 42](02.funciones/42.ejercicio.py)
+     - Crear un programa para gestionar datos de los socios de un club.
+     - Los datos a almacenar son: número de socio, nombre y apellido, fecha de ingreso (ddmmaaaa), cuota al día (s/n).
+     - El programa debe iniciar con los datos de los socios fundadores ya cargados:
+         - Socio nº1: Amanda Núñez, ingresó el 17/03/2009, cuota al día.
+         - Socio nº2: Bárbara Molina, ingresó el 17/03/2009, cuota al día.
+         - Socio nº3: Lautaro Campos, ingresó el 17/03/2009, cuota al día.
+     - Funcionalidades:
+         - Informar la cantidad de socios del club.
+         - Registrar el pago de cuotas adeudadas de un socio.
+         - Modificar la fecha de ingreso de los socios ingresados el 13/03/2018 a 14/03/2018.
+         - Dar de baja un socio por nombre y apellido.
+         - Imprimir el listado de socios completo.
+
+   [Indice](#indice)
 
    4. **Estructuras de Datos (Listas, Tuplas, Conjuntos, Diccionarios)**  
       [Ejercicios destacados:](#)
