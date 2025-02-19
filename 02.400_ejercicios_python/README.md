@@ -213,11 +213,15 @@ Este directorio ofrece una colección integral de 400 ejercicios resueltos en Py
 ### [Listas tuplas conjuntos y diccionarios](03.listas-tuplas-conjuntos-diccionarios)
 
    - [Ejercicio 37](02.funciones/37.ejercicio.py)
-         - A) Solicitar al usuario que ingrese números, los cuales se guardarán en una lista. Finalizar al ingresar el número 0, el cual no debe guardarse.
-         - B) Solicitar al usuario que ingrese un número y, si está en la lista, eliminar su primera ocurrencia. Mostrar un mensaje si no es posible eliminar.
-         - C) Recorrer la lista para imprimir la sumatoria de todos los elementos.
-         - D) Solicitar otro número y crear una lista con los elementos menores que el número dado. Imprimir la nueva lista.
-         - E) Generar e imprimir una nueva lista con tuplas (número, cantidad de veces que aparece en la lista original).
+      - A) Solicitar al usuario que ingrese números, los cuales se guardarán en una lista. Finalizar al ingresar el número 0, el cual no debe guardarse.
+
+      - B) Solicitar al usuario que ingrese un número y, si está en la lista, eliminar su primera ocurrencia. Mostrar un mensaje si no es posible eliminar.
+         
+      - C) Recorrer la lista para imprimir la sumatoria de todos los elementos.
+         
+      - D) Solicitar otro número y crear una lista con los elementos menores que el número dado. Imprimir la nueva lista.
+         
+      - E) Generar e imprimir una nueva lista con tuplas (número, cantidad de veces que aparece en la lista original).
 
    - [Ejercicio 38](02.funciones/38.ejercicio.py)
          - Escribir un programa que permita procesar datos de pasajeros de viaje en una lista de tuplas con la siguiente forma: (nombre, dni, destino). Ejemplo:
