@@ -156,6 +156,28 @@ Este directorio ofrece una colección integral de 400 ejercicios resueltos en Py
      - Definir una función inversa() que calcule la inversión de una cadena.
          - Por ejemplo la cadena "estoy probando" debería devolver la cadena "odnaborp yotse".
 
+   - [Ejercicio 33](02.funciones/33.ejercicio.py)
+     - Definir una función es_palindromo() que reconoce palíndromos (es decir, palabras que tienen el mismo aspecto escritas invertidas).
+     - Ejemplo: es_palindromo("radar") tendría que devolver True.
+
+   - [Ejercicio 34](02.funciones/34.ejercicio.py)
+     - Definir una función superposicion() que tome dos listas y devuelva True si tienen al menos 1 miembro en común o devuelva False de lo contrario.
+     - Escribir la función usando el bucle for anidado.
+
+   - [Ejercicio 35](02.funciones/35.ejercicio.py)
+     - Definir una función generar_n_caracteres() que tome un entero n y devuelva el carácter multiplicado por n.
+     - Por ejemplo: generar_n_caracteres(5, "x") debería devolver "xxxxx".
+
+   - [Ejercicio 36](02.funciones/36.ejercicio.py)
+     - Definir un histograma procedimiento() que tome una lista de números enteros e imprima un histograma en la pantalla.
+     - Ejemplo: procedimiento([4, 9, 7]) debería imprimir lo siguiente:
+       ```
+       ****
+       *********
+       *******
+       ```
+
+
 
 
    4. **Estructuras de Datos (Listas, Tuplas, Conjuntos, Diccionarios)**  
