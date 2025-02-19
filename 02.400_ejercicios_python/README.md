@@ -8,6 +8,7 @@ Este directorio ofrece una colección integral de 400 ejercicios resueltos en Py
 
 ### 📜 Índice
  1. [Variables, Operadores, Condicionales y Bucles](#variables-operadores-condicionales-y-bucles)
+ 2. [Funciones](#funciones)
  2. [Lista, tuplas, conjuntos, diccionarios](#lista-tuplas-conjuntos-diccionarios)
  3. [Mas diccionarios, listas, tuplas, conjuntos](#mas-diccionarios-listas-tuplas-conjuntos)
  4. [Validación de datos de entrada](#validación-de-datos-de-entrada)
@@ -56,17 +57,45 @@ Este directorio ofrece una colección integral de 400 ejercicios resueltos en Py
    - [Ejercicio 9](01.variables-operadores-expresiones-condicionales-bucles/09.ejercicio.py)  
       - Hacer un programa que imprima una tabla de multiplicar del 2 al 9 . Cada uno debe mostrar sus valores multiplicados del 1 al 9 inclusive.
    
-   - [Ejercicio 10](01.variables-operadores-expresiones-condicionales-bucles/10.ejercicio.py) 
-      - Hacer un programa que muestre el siguiente dibujo.
-   
-   - [Ejercicio 11](01.variables-operadores-expresiones-condicionales-bucles/11.ejercicio.py) 
-      - Hacer un programa que muestre el siguiente dibujo...
-   
-   - [Ejercicio 12](01.variables-operadores-expresiones-condicionales-bucles/12.ejercicio.py) 
-      - Hacer un programa que muestre el siguiente dibujo...
-   
-   - [Ejercicio 13](01.variables-operadores-expresiones-condicionales-bucles/13.ejercicio.py) 
-      - Idem anterior con este dibujo...
+   - [Ejercicio 10](01.variables-operadores-expresiones-condicionales-bucles/10.ejercicio.py)
+     - Hacer un programa que muestre el siguiente dibujo:
+       ```
+       * * * * * * * * * *
+       * * * * * * * * * *
+       * * * * * * * * * *
+       * * * * * * * * * *
+       * * * * * * * * * *
+       ```
+
+   - [Ejercicio 11](01.variables-operadores-expresiones-condicionales-bucles/11.ejercicio.py)
+     - Hacer un programa donde se muestre el siguiente dibujo:
+       ```
+       * * * * * * * * * *
+       *                 *
+       *                 *
+       *                 *
+       * * * * * * * * * *
+       ```
+
+   - [Ejercicio 12](01.variables-operadores-expresiones-condicionales-bucles/12.ejercicio.py)
+     - Hacer un programa que muestre el siguiente dibujo de triángulo ascendente:
+       ```
+       *
+       * *
+       * * *
+       * * * *
+       * * * * *
+       ```
+
+   - [Ejercicio 13](01.variables-operadores-expresiones-condicionales-bucles/13.ejercicio.py)
+     - Hacer un programa que muestre el siguiente dibujo de triángulo descendente:
+       ```
+       * * * * *
+       * * * *
+       * * *
+       * *
+       *
+       ```
 
 ### [Funciones](02.funciones)
    **Ejercicios**  
