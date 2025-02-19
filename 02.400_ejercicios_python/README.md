@@ -28,7 +28,7 @@ Este directorio ofrece una colección integral de 400 ejercicios resueltos en Py
  19. [Inteligencia Artificial](#inteligencia-artificial)
 
 
-### [Variables, Operadores, Condicionales y Bucles](https://github.com/Caupolicanafulvicollis/Algorithms/tree/main/02.400_ejercicios_python/01.variables-operadores-expresiones-condicionales-bucles)
+### [Variables, Operadores, Condicionales y Bucles](01.variables-operadores-expresiones-condicionales-bucles)
    **Ejercicios**
    - [Ejercicio 1](01.variables-operadores-expresiones-condicionales-bucles/01.ejercicio.py)  
       - Hacer un programa donde se pida un nombre por teclado y se imprima “Hola ..el_nombre_ingresado".
@@ -57,11 +57,8 @@ Este directorio ofrece una colección integral de 400 ejercicios resueltos en Py
    - [Ejercicio 13](01.variables-operadores-expresiones-condicionales-bucles/13.ejercicio.py) 
       - Idem anterior con este dibujo...
 
-### Lista, tuplas, conjuntos, diccionarios
-   **Ejercicios**
-   
-
-3. **Funciones**  
+###[Funciones]
+   **Funciones**  
    - [Ejercicio 14](02.funciones/14.ejercicio.py) 
       - Crea un función EscribirCentrado, que reciba como parámetro un texto y lo escriba centrado en pantalla (suponiendo una anchura de 80 columnas; pista: deberás escribir 40 - longitud/2 espacios antes del texto). Además subraya el mensaje utilizando el carácter =.
    - [Ejercicio 15](02.funciones/15.ejercicio.py)
