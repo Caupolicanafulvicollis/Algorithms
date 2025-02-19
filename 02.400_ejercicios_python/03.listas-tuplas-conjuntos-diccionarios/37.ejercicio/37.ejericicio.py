@@ -55,8 +55,29 @@ def menu():
             #Validacion de la opcion ingresada
             if option < 1 or option >6: 
                 raise ValueError("La opción debe ser un número válido entre 1 y 6.")
-            
-        except ValueError as e: 
+            if not option:
+                raise ValueError("La opcion no puede estar vacia")
+        except ValueError as e:
+            print(f"Ocurrió un error: {e}")
+            print("Ingrese los datos del pasajero de manera correcta.")  
+        if option == 1:
+            while True:
+                ()
+        if option == 2:
+            while True:
+                ()
+        if option == 3:
+            while True:
+                ()
+        if option == 4:
+            while True:
+                ()
+        if option == 5:
+            while True:
+                ()
+        if option == 6:
+            while True:
+                ()
 
 
 
