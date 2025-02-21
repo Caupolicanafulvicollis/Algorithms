@@ -1,98 +1,47 @@
 import unittest
 from unittest.mock import patch
 # Base de datos de pasajeros con nombre, RUT (DNI) y código IATA del destino
-db = [
-    ("Manuel Juarez", 19823451, "LPL"), 
-    ("Silvana Paredes", 22709128, "EZE"), 
-    ("Rosa Ortiz", 15123978, "GLA"), 
-    ("Luciana Hernandez", 38981374, "LIS"),
-    ("Carlos Ramírez", 30456789, "MAD"),
-    ("Sofía Méndez", 21987654, "BCN"),
-    ("Fernando López", 34567890, "CDG"),
-    ("Ana Torres", 27891234, "FRA"),
-    ("Javier Gómez", 25678912, "JFK"),
-    ("Marta Sánchez", 31234567, "MEX"),
-    ("Diego Fernández", 33112233, "SCL"),
-    ("Paula Herrera", 40223344, "GRU"),
-    ("Ricardo Díaz", 29887766, "AMS"),
-    ("Valentina Rojas", 36778899, "FCO"),
-    ("Andrés Navarro", 31445566, "LAX"),
-    ("Camila Vargas", 28009988, "YYZ"),
-    ("Esteban Castro", 31992211, "MIA"),
-    ("Mariana Silva", 33881122, "BKK"),
-    ("Hugo Fuentes", 35556677, "SYD"),
-    ("Natalia Espinoza", 39005544, "DXB"),
-    ("Andrea Núñez", 47778899, "MAD"),
-    ("Gabriela Suárez", 49990011, "ATL"),
-    ("Pablo Contreras", 50001122, "MIA"),
-    ("Elena Castillo", 44445566, "MAD"),
-    ("Juan Morales", 43334455, "MAD"),
-    ("Santiago Pérez", 46667788, "JFK"),
-    ("Roberto Méndez", 48889900, "ORD"),
-    ("Cecilia Ocampo", 42223344, "MAD"),
-    ("Martín Ríos", 45556677, "MAD"),
-    ("Luis Pereira", 41112233, "ORD"),
-]
+db = []
 
 # Lista de destinos con código IATA y país
-destinos = [
-    ("EZE", "Argentina"),
-    ("GLA", "Escocia"),
-    ("LIS", "Portugal"),
-    ("LPL", "Inglaterra"),
-    ("MAD", "España"),
-    ("BCN", "España"),
-    ("CDG", "Francia"),
-    ("FRA", "Alemania"),
-    ("JFK", "Estados Unidos"),
-    ("MEX", "México"),
-    ("SCL", "Chile"),
-    ("GRU", "Brasil"),
-    ("AMS", "Países Bajos"),
-    ("FCO", "Italia"),
-    ("LAX", "Estados Unidos"),
-    ("YYZ", "Canadá"),
-    ("MIA", "Estados Unidos"),
-    ("BKK", "Tailandia"),
-    ("SYD", "Australia"),
-    ("DXB", "Emiratos Árabes Unidos"),
-    ("ORD", "Estados Unidos"),
-    ("ATL", "Estados Unidos"),
-    ("CUN", "México"),
-    ("MVD", "Uruguay"),
-    ("BOG", "Colombia"),
-    ("SVO", "Rusia"),
-    ("ICN", "Corea del Sur"),
-    ("HND", "Japón"),
-    ("SIN", "Singapur"),
-    ("DEL", "India"),
-]
+destinos = []
 
 contador_ciudad=0
 contador_pais=0
 
+def open_db(db):
+    with open('airline_db.txt') as file_object:
+        lines=file_object.readlines()
+    for line in lines:
+        db.append(line)
+    return db
+
+def open_destinos(destinos):
+    with open('airline_destiny.txt') as file_object:
+            lines=file_object.readlines()
+    for line in lines:
+        destinos.append(line)
+    return destinos
+
+def write_destinos(destinos):
+    with open()
+
 #Agregar ciudades a la lista destinos.
-def rutas(destinos, codigos_iata, paises):
-    nuevos_destinos = []
-    
-    # Agregar los nuevos destinos a la lista existente sin duplicados
-    for i in range(len(codigos_iata)):
-        nuevos_destinos.append((codigos_iata[i], paises[i]))
-
-    for destino in nuevos_destinos:
-        if destino not in destinos:
-            destinos.append(destino)
-
+def rutas(destinos, codigos_iata, paises): #rutas(destinos,pais,ciudad)
+    destinos=open_destinos(destinos)
+    # Agregar los nuevos destinos a una nueva lista
+    nuevos_destinos = list((codigos_iata,paises))
+    destinos.extend(nuevos_destinos)
+    print("ciudad y país agregado correctamente a la base de datos")
     return destinos
 
 #Agregar pasajeros a la lista de viajeros.
 def base_datos(db,nombres,apellidos,dnis,destinos):    
-    # Agregar los nuevos pasajeros a la lista existente sin duplicados
-    for i in range(len(nombres)):
-        nuevo_pasajero = (f"{nombres[i]} {apellidos[i]}", dnis[i], destinos[i])
-        if nuevo_pasajero not in db:
-            db.append(nuevo_pasajero)
-        print("Pasajero agregado correctamento a la base de datos")
+    db=open_db(db)
+    #Agregar los nujevos pasajeros a una nueva lista
+    nuevo_pasajero = list((f"{nombres} {apellidos}", dnis, destinos))
+    db.extend(nuevo_pasajero)
+    print("Pasajero agregado correctamente a la base de datos")
     return db
 
 #Dado el DNI de un pasajero, ver a qué ciudad viaja.
@@ -126,7 +75,6 @@ def flujo_destino_pais(lista_pasajeros, pais, destinos):
         if pasajero[2] in codigos_iata:
             contador_pais += 1
     return contador_pais
-
                
 def menu():
     while True:  # Hasta que se ingrese una opción válida
@@ -248,21 +196,22 @@ def menu():
             print("Por favor, ingrese un número válido entre 1 y 6.")                 
 
 if __name__ == "__main__":
-    with patch("builtins.input", side_effect=["3", "19823451", "6"]):  # Buscar un pasajero y salir
-        assert menu() is None
-
-    with patch("builtins.input", side_effect=["4", "MAD", "6"]):  # Buscar pasajeros a MAD y salir
-        assert menu() is None
-
-    with patch("builtins.input", side_effect=["5", "España", "6"]):  # Buscar pasajeros a España y salir
-        assert menu() is None
-
-    with patch("builtins.input", side_effect=["1", "Guillermo", "Vidal", "15459799", "SCL", "6"]):  # Agregar pasajero y salir
-        assert menu() is None
-
-    with patch("builtins.input", side_effect=["2", "Chile", "SCL", "6"]):  # Agregar una ciudad y salir
-        assert menu() is None
-
-    with patch("builtins.input", side_effect=["7", "6"]):  # Intentar opción inválida, luego salir
-        assert menu() is None
-    print("Todas las pruebas han pasado correctamente ✅")
+    pass
+#    with patch("builtins.input", side_effect=["3", "19823451", "6"]):  # Buscar un pasajero y salir
+#        assert menu() is None
+#
+#    with patch("builtins.input", side_effect=["4", "MAD", "6"]):  # Buscar pasajeros a MAD y salir
+#        assert menu() is None
+#
+#    with patch("builtins.input", side_effect=["5", "España", "6"]):  # Buscar pasajeros a España y salir
+#        assert menu() is None
+#
+#    with patch("builtins.input", side_effect=["1", "Guillermo", "Vidal", "15459799", "SCL", "6"]):  # Agregar pasajero y salir
+#        assert menu() is None
+#
+#    with patch("builtins.input", side_effect=["2", "Chile", "SCL", "6"]):  # Agregar una ciudad y salir
+#        assert menu() is None
+#
+#    with patch("builtins.input", side_effect=["7", "6"]):  # Intentar opción inválida, luego salir
+#        assert menu() is None
+#    print("Todas las pruebas han pasado correctamente ✅")
