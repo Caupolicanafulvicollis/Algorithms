@@ -10,30 +10,43 @@ contador_ciudad=0
 contador_pais=0
 
 def open_db(db):
-    with open('airline_db.txt') as file_object:
-        lines=file_object.readlines()
-    for line in lines:
-        db.append(line)
-    return db
+    try:    
+        with open('airline_db.txt') as file_object:
+            lines=file_object.readlines()
+        for line in lines:
+            db.append(line)
+        return db
+    except FileNotFoundError:
+        print("El archivo no existe")
+    except Exception as e:
+        print(f"Ocurrió un error: {e}")
 
 def open_destinos(destinos):
-    with open('airline_destiny.txt') as file_object:
-            lines=file_object.readlines()
-    for line in lines:
-        destinos.append(line)
-    return destinos
-
-def write_destinos(destinos):
-    with open()
+    try:    
+        with open('airline_destiny.txt') as file_object:
+                lines=file_object.readlines()
+        for line in lines:
+            destinos.append(line)
+        return destinos
+    except FileNotFoundError:
+        print("El archivo no existe")
+    except Exception as e:
+        print(f"Ocurrió un error: {e}")
 
 #Agregar ciudades a la lista destinos.
 def rutas(destinos, codigos_iata, paises): #rutas(destinos,pais,ciudad)
-    destinos=open_destinos(destinos)
     # Agregar los nuevos destinos a una nueva lista
     nuevos_destinos = list((codigos_iata,paises))
     destinos.extend(nuevos_destinos)
-    print("ciudad y país agregado correctamente a la base de datos")
-    return destinos
+    try:
+        with open('airline_destiny.txt', 'w', encoding="utgf-8") as file:
+            file.writelines(nuevos_destinos)
+        print("ciudad y país agregado correctamente a la base de datos")
+        return destinos
+    except FileNotFoundError:
+        print("El archivo no existe")
+    except Exception as e:
+        print(f"Ocurrio un erro: {e}")
 
 #Agregar pasajeros a la lista de viajeros.
 def base_datos(db,nombres,apellidos,dnis,destinos):    
@@ -41,8 +54,15 @@ def base_datos(db,nombres,apellidos,dnis,destinos):
     #Agregar los nujevos pasajeros a una nueva lista
     nuevo_pasajero = list((f"{nombres} {apellidos}", dnis, destinos))
     db.extend(nuevo_pasajero)
-    print("Pasajero agregado correctamente a la base de datos")
-    return db
+    try:
+        with open('airline_destiny.txt', 'w', encoding="utgf-8") as file:
+            file.writelines(nuevo_pasajero)
+        print("Pasajero agregado correctamente a la base de datos")
+        return db
+    except FileNotFoundError:
+        print("El archivo no existe")
+    except Exception as e:
+        print(f"Ocurrio un erro: {e}")
 
 #Dado el DNI de un pasajero, ver a qué ciudad viaja.
 def busqueda_dni(lista_pasajeros, dni):
