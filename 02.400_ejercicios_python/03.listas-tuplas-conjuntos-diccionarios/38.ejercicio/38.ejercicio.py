@@ -216,7 +216,7 @@ def menu():
             print("Por favor, ingrese un número válido entre 1 y 6.")                 
 
 if __name__ == "__main__":
-    pass
+    menu()
 #    with patch("builtins.input", side_effect=["3", "19823451", "6"]):  # Buscar un pasajero y salir
 #        assert menu() is None
 #
