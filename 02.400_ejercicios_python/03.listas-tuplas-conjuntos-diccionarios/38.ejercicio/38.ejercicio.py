@@ -124,18 +124,18 @@ def menu():
             if option < 1 or option > 6:
                 raise ValueError("La opción debe ser un número válido entre 1 y 6.")
 
-            # Ejecución según la opción elegida
             #1. Agregar pasajeros a la lista de viajeros.
             if option == 1: 
                 while True: #Hasta que resulte las entradas    
                     try:
-                        #Nombre y apellido
+                        #Solicitar datos del pasajero
                         nombre=input("Ingrese el nombre del pasajero: ").title()
                         apellido=input("Ingrese el apellido del pasajero: ").title()
-                        dni=int(input("Ingrese el DNI del pasajero: ").strip())
-                        destino=input("Ingrese ciudad de destino en codigo IATA: ").upper().strip()
-                        if not nombre or not apellido:
-                            raise ValueError("El nombre y el apellido no pueden estar vacíos")
+                        destino=input("Ingrese ciudad de destino en codigo IATA (3 letras): ").upper().strip()
+                        if not nombre.isalpha() or not apellido.isalpha():
+                            raise ValueError("El nombre y apellido solo pueden contener letras")
+                        if not destino.isalpha() or len(destino) !=3 :
+                            raise ValueError("El codigo IATA debe tener 3 letras")
                         if not nombre.replace(" ", "").isalpha() or not apellido.replace(" ", "").isalpha() or not destino.isalpha():
                             raise ValueError("El nombre, apellido y destino solo pueden contener letras")
                         if not destino: 
