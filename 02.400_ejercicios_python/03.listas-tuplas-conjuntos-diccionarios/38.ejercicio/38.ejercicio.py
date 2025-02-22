@@ -38,6 +38,7 @@ def open_destinos(destinos):
 
 #1. Agregar pasajeros a la lista de viajeros.
 def rutas(destinos, codigos_iata, paises): #rutas(destinos,pais,ciudad)
+    print("Ejecutando funcion rutas()")
     # Agregar los nuevos destinos a una nueva lista
     nuevos_destinos = list((codigos_iata,paises))
     destinos.extend(nuevos_destinos)
@@ -52,25 +53,19 @@ def rutas(destinos, codigos_iata, paises): #rutas(destinos,pais,ciudad)
         print(f"Ocurrio un erro: {e}")
 
 #2. Agregar ciudades a la lista de ciudades.
-def base_datos(db, nombres, apellidos, dnis, destinos):    
-    db = open_db(db)
-    
-    if db is None:  # Manejo de error adicional
-        print("No se pudo cargar la base de datos.")
-        return
-
-    nuevo_pasajero = [f"{nombres} {apellidos}", dnis, destinos]
-    db.extend(nuevo_pasajero)
-
+def base_datos(db, nombre, apellido, dni, destino):    
+    pasajero_formato = f'("{nombre} {apellido}", {dni}, "{destino}"),'
+    # Agregar a la base de datos en memoria
+    db.append(pasajero_formato.strip()) 
+    ruta_completa = "/home/puyachilensis36/Algorithms/02.400_ejercicios_python/03.listas-tuplas-conjuntos-diccionarios/38.ejercicio/airline_db.txt"
     try:
-        with open('airline_db.txt', 'w', encoding="utf-8") as file:
-            file.writelines("\n".join(map(str, db)))  # Escribe los datos en líneas separadas
-        print("Pasajero agregado correctamente a la base de datos")
-        return db
+        with open(ruta_completa, 'a', encoding="utf-8") as file:
+            file.write(pasajero_formato)  # Escribir en el archivo con el formato deseado
+        print("✅ Pasajero agregado correctamente a la base de datos")
     except FileNotFoundError:
-        print("El archivo no existe")
+        print("❌ Error: No se encontró el archivo.")
     except Exception as e:
-        print(f"Ocurrió un error: {e}")
+        print(f"⚠️ Ocurrió un error al escribir en el archivo: {e}")
 
 # 3. Dado el DNI de un pasajero, ver a qué ciudad viaja.
 def busqueda_dni(lista_pasajeros, dni):
