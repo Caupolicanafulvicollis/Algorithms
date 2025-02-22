@@ -142,16 +142,25 @@ def menu():
                             raise ValueError("El destino no puede estar vacio")
                         if len(str(destino)) != 3:
                             raise ValueError("El codigo IATA de la ciudad debe contener 3 letras.")
-                        if dni <= 0 or len(str(dni)) < 7 or len(str(dni)) > 8:
-                            raise ValueError("El DNI debe ser un número válido con 7 a 8 dígitos")
-                        if not dni:
-                            raise ValueError("El DNI no puede estar vacio")
-                        break  # Salir del bucle si todo está correcto
+                        
+                        #Manejar el DNI correctamente
+                        while True:
+                            try:
+                                dni=int(input("Ingrese el DNI del pasajero (7-8 digitos): ").strip())
+                                if not (7 <= len(str(dni)) <= 8):
+                                    raise ValueError("El DNI debe tener entre 7 y 8 digitos")
+                                break #Sale del bucle si es valido
+                            except ValueError:
+                                print("Error: El DNI debe ser un numero valido con 7 a 8 digitos")
+                        #Si todo es valido, salir del bucle
+                        break
                     except ValueError as e:
                         print(f"Ocurrió un error: {e}")
                         print("Ingrese los datos del pasajero de manera correcta.")
+                    
                     # Llamar a `base_datos()` con listas en lugar de valores individuales
                     base_datos(db,[nombre],[apellido],[dni],[destino])
+            
             #2. Agregar ciudades a la lista de ciudades.
             elif option == 2:
                 while True: 
