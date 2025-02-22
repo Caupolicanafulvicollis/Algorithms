@@ -118,48 +118,41 @@ def menu():
                   6. Salir del programa.""")
 
             # Entrada del usuario
-            option = int(input("Ingrese su opción: ").strip())
+            option = input("Ingrese su opción: ").strip()
+            if not option.isdigit() or int(option) not in range(1, 7):
+                print("❌ Error: La opción debe ser un número válido entre 1 y 6.")
+                continue
+            option = int(option)
 
-            # Validación de la opción ingresada
-            if option < 1 or option > 6:
-                raise ValueError("La opción debe ser un número válido entre 1 y 6.")
-
-            #1. Agregar pasajeros a la lista de viajeros.
-            if option == 1: 
-                while True: #Hasta que resulte las entradas    
-                    try:
-                        #Solicitar datos del pasajero
-                        nombre=input("Ingrese el nombre del pasajero: ").title()
-                        apellido=input("Ingrese el apellido del pasajero: ").title()
-                        destino=input("Ingrese ciudad de destino en codigo IATA (3 letras): ").upper().strip()
-                        if not nombre.isalpha() or not apellido.isalpha():
-                            raise ValueError("El nombre y apellido solo pueden contener letras")
-                        if not destino.isalpha() or len(destino) !=3 :
-                            raise ValueError("El codigo IATA debe tener 3 letras")
-                        if not nombre.replace(" ", "").isalpha() or not apellido.replace(" ", "").isalpha() or not destino.isalpha():
-                            raise ValueError("El nombre, apellido y destino solo pueden contener letras")
-                        if not destino: 
-                            raise ValueError("El destino no puede estar vacio")
-                        if len(str(destino)) != 3:
-                            raise ValueError("El codigo IATA de la ciudad debe contener 3 letras.")
-                        
-                        #Manejar el DNI correctamente
-                        while True:
-                            try:
-                                dni=int(input("Ingrese el DNI del pasajero (7-8 digitos): ").strip())
-                                if not (7 <= len(str(dni)) <= 8):
-                                    raise ValueError("El DNI debe tener entre 7 y 8 digitos")
-                                break #Sale del bucle si es valido
-                            except ValueError:
-                                print("Error: El DNI debe ser un numero valido con 7 a 8 digitos")
-                        #Si todo es valido, salir del bucle
+            # 1. Agregar pasajeros a la lista de viajeros.
+            if option == 1:
+                while True:  # Nombre válido
+                    nombre = input("Ingrese el nombre del pasajero: ").title().strip()
+                    if nombre.isalpha():
                         break
-                    except ValueError as e:
-                        print(f"Ocurrió un error: {e}")
-                        print("Ingrese los datos del pasajero de manera correcta.")
-                    
-                    # Llamar a `base_datos()` con listas en lugar de valores individuales
-                    base_datos(db,[nombre],[apellido],[dni],[destino])
+                    print("❌ Error: El nombre solo puede contener letras.")
+
+                while True:  # Apellido válido
+                    apellido = input("Ingrese el apellido del pasajero: ").title().strip()
+                    if apellido.isalpha():
+                        break
+                    print("❌ Error: El apellido solo puede contener letras.")
+
+                while True:  # Código IATA válido
+                    destino = input("Ingrese ciudad de destino en código IATA (3 letras): ").upper().strip()
+                    if destino.isalpha() and len(destino) == 3:
+                        break
+                    print("❌ Error: El código IATA debe tener exactamente 3 letras.")
+
+                while True:  # DNI válido
+                    dni = input("Ingrese el DNI del pasajero (7-8 dígitos): ").strip()
+                    if dni.isdigit() and 7 <= len(dni) <= 8:
+                        dni = int(dni)
+                        break
+                    print("❌ Error: El DNI debe ser un número válido con 7 a 8 dígitos.")
+
+                # Llamar a la función después de validar los datos
+                base_datos(db, nombre, apellido, dni, destino)
             
             #2. Agregar ciudades a la lista de ciudades.
             elif option == 2:
